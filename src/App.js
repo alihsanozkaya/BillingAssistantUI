@@ -7,11 +7,16 @@ import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { isUserLoggedIn } from "./redux/actions/AuthActions";
 import NotFoundPage from "./pages/NotFoundPage";
+import UploadPage from "./pages/UploadPage";
+import ProfilePage from "./pages/ProfilePage";
+import VertifyPage from "./pages/VertifyPage";
+import PrivateRoute from "./routes/PrivateRoute";
+import PropertiesPage from "./pages/PropertiesPage";
+
 function App() {
   const dispatch = useDispatch();
   const auth = useSelector((state) => state.auth);
 
-  // When we fresh the page if you are in logged in  stay logged in
   useEffect(() => {
     if (!auth.authenticate) {
       dispatch(isUserLoggedIn());
@@ -23,6 +28,10 @@ function App() {
         <Route index path="/" element={<HomePage />} />
         <Route path="/register" element={<RegisterPage />} />
         <Route path="/login" element={<LoginPage />} />
+        <Route path="/upload" element={<PrivateRoute><UploadPage /></PrivateRoute>} />
+        <Route path="/profile" element={<ProfilePage />} />
+        <Route path="/verified/:email" element={<VertifyPage />} />
+        <Route path="/properties" element={<PrivateRoute><PropertiesPage /></PrivateRoute>} />
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
     </Router>
