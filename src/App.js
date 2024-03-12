@@ -28,8 +28,8 @@ function App() {
         <Route index path="/" element={<HomePage />} />
         <Route path="/register" element={<RegisterPage />} />
         <Route path="/login" element={<LoginPage />} />
-        <Route path="/upload" element={<PrivateRoute><UploadPage /></PrivateRoute>} />
-        <Route path="/profile" element={<ProfilePage />} />
+        <Route path="/upload" element={<UploadPage />} />
+        <Route path="/profile" element={<PrivateRoute><ProfilePage /></PrivateRoute>} />
         <Route path="/verified/:email" element={<VertifyPage />} />
         <Route path="/properties" element={<PrivateRoute><PropertiesPage /></PrivateRoute>} />
         <Route path="*" element={<NotFoundPage />} />

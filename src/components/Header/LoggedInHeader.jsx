@@ -52,12 +52,6 @@ export const LoggedInHeader = () => {
                 >
                   {auth.user.firstName + " " + auth.user.lastName}
                 </Link>
-                <button
-                  className="btn btn-dark rounded-pill"
-                  onClick={() => navigate("/my-profile", { replace: true })}
-                >
-                  Profilim
-                </button>
               </div>
               <div class="flex flex-1 justify-between items-center">
                 <button
