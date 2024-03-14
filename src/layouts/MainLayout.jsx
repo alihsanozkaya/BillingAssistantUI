@@ -6,9 +6,7 @@ const MainLayout = ({ children }) => {
   return (
     <Fragment>
       <MainHeader />
-      <div className="bg-white px-4 py-5 max-w-screen-xl mx-auto md:px-8">
         {children}
-      </div>
       <MainFooter />
     </Fragment>
   );

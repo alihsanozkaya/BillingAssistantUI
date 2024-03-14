@@ -26,7 +26,7 @@ export const LoggedInHeader = () => {
   return (
     <Popover.Group className="hidden lg:flex lg:gap-x-12">
       <Popover className="relative">
-        <Popover.Button className="flex items-center gap-x-1 text-sm font-semibold leading-6 p-2 bg-slate-300 rounded-lg hover:no-underline hover:bg-white">
+        <Popover.Button className="flex items-center gap-x-1 text-sm font-semibold leading-6 p-2 rounded-lg hover:no-underline hover:bg-white">
           Hesabım
           <ChevronDownIcon
             className="h-5 w-5 flex-none text-gray-400"
@@ -44,10 +44,10 @@ export const LoggedInHeader = () => {
           leaveTo="opacity-0 translate-y-1"
         >
           <Popover.Panel className="absolute -left-2 mt-2 w-auto overflow-hidden rounded-lg bg-white shadow-lg ring-1 ring-gray-900/5">
-            <div className="p-4 bg-slate-300">
+            <div className="p-4" style={{background: "linear-gradient(to right, rgba(249, 215, 28, 0.5), rgba(107, 45, 159, 0.5))"}}>
             <div class="flex flex-1 justify-between items-center">
                 <button
-                  className="text-sm font-semibold leading-10 p-2 mt-2 bg-slate-300 rounded-lg hover:no-underline hover:bg-white"
+                  className="text-sm font-semibold leading-10 p-2 mt-2 rounded-lg hover:no-underline hover:bg-white"
                   onClick={() => navigate("/my-profile", { replace: true })}
                 >
                   Profilim
@@ -55,7 +55,7 @@ export const LoggedInHeader = () => {
               </div>
               <div class="flex flex-1 justify-between items-center">
                 <button
-                  className="text-sm font-semibold leading-10 p-2 mt-2 bg-slate-300 rounded-lg hover:no-underline hover:bg-white"
+                  className="text-sm font-semibold leading-10 p-2 mt-2 rounded-lg hover:no-underline hover:bg-white"
                   onClick={() => navigate("/upload", { replace: true })}
                 >
                   Faturalarım
@@ -64,7 +64,7 @@ export const LoggedInHeader = () => {
               <div class="flex flex-1 justify-between items-center">
                 <button
                   onClick={LogoutHandler}
-                  className="text-sm font-semibold leading-10 p-2 mt-2 bg-slate-300 rounded-lg hover:no-underline hover:bg-white"
+                  className="text-sm font-semibold leading-10 p-2 mt-2 rounded-lg hover:no-underline hover:bg-white"
                 >
                   Çıkış yap
                 </button>
