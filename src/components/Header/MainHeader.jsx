@@ -21,13 +21,19 @@ const MobileMenu = ({ onClose }) => {
   return (
     <div className="lg:hidden">
       <Link
+        to="/about"
+        className="block text-sm font-semibold leading-6 text-gray-900 py-2"
+      >
+        Hakkımızda
+      </Link>
+      <Link
         to="/properties"
         className="block text-sm font-semibold leading-6 text-gray-900 py-2"
       >
         Özellikler
       </Link>
       <Link
-        to="/"
+        to="/pricing"
         className="block text-sm font-semibold leading-6 text-gray-900 py-2"
       >
         Ücretlendirme
