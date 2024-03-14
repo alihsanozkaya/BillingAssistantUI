@@ -6,13 +6,13 @@ export const NotLoggedInHeader = () => {
     <div className="hidden lg:flex lg:justify-end ">
       <Link
         to="/login"
-        className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 me-3"
+        className="-mx-3 text-lg font-semibold leading-6 p-2 bg-slate-300 rounded-lg hover:no-underline hover:bg-white me-3"
       >
         Giriş
       </Link>
       <Link
         to="/register"
-        className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+        className="-mx-3 text-lg font-semibold leading-6 p-2 bg-slate-300 rounded-lg hover:no-underline hover:bg-white"
       >
         Üye ol
       </Link>

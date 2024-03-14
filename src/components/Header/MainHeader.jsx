@@ -6,6 +6,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { logout } from "../../redux/actions/AuthActions";
 import { LoggedInHeader } from "./LoggedInHeader";
 import { NotLoggedInHeader } from "./NotLoggedInHeader";
+import logo from "../../images/bill-icon-logo-vector.jpg"  
 
 const MobileMenu = ({ onClose }) => {
   const auth = useSelector((state) => state.auth);
@@ -81,17 +82,17 @@ const MainHeader = () => {
   const auth = useSelector((state) => state.auth);
 
   return (
-    <header className="bg-white">
+    <header className="bg-slate-300">
       <nav
-        className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8"
+        className="mx-auto flex max-w-7xl items-center justify-between p-2 lg:px-8"
         aria-label="Global"
       >
         <div className="flex lg:flex-1">
           <Link to="/" className="-m-1.5 p-1.5">
             <span className="sr-only">Your Company</span>
             <img
-              className="h-8 w-auto"
-              src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
+              className="h-12 w-auto"
+              src= {logo}
               alt=""
             />
           </Link>
@@ -107,15 +108,21 @@ const MainHeader = () => {
           </button>
         </div>
         <Popover.Group className="hidden lg:flex lg:gap-x-12">
+        <Link
+            to="/"
+            className="text-sm font-semibold leading-6 p-2 bg-slate-300 rounded-lg hover:no-underline hover:bg-white"
+          >
+            Hakkımızda
+          </Link>
           <Link
             to="/properties"
-            className="text-sm font-semibold leading-6 text-gray-900"
+            className="text-sm font-semibold leading-6 p-2 bg-slate-300 rounded-lg hover:no-underline hover:bg-white"
           >
             Özellikler
           </Link>
           <Link
             to="/"
-            className="text-sm font-semibold leading-6 text-gray-900"
+            className="text-sm font-semibold leading-6 p-2 bg-slate-300 rounded-lg hover:no-underline hover:bg-white"
           >
             Ücretlendirme
           </Link>
