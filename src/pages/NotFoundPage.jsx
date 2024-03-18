@@ -17,7 +17,7 @@ const NotFoundPage = () => {
             Sayfa bulunamadı
           </h1>
           <p className="mt-6 text-base leading-7 text-gray-600">
-          Üzgünüz, aradığınız sayfayı bulamadık.
+            Üzgünüz, aradığınız sayfayı bulamadık.
           </p>
           <div className="mt-10 flex items-center justify-center gap-x-6">
             <a

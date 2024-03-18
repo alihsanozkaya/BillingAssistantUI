@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { Login, getUserVerificationStatus } from "../redux/actions/AuthActions";
 import { Link, useNavigate } from "react-router-dom";
 import { message } from "antd";
-import { EyeOutlined, EyeInvisibleOutlined} from '@ant-design/icons';
+import { EyeOutlined, EyeInvisibleOutlined } from "@ant-design/icons";
 
 const LoginPage = () => {
   const [email, setEmail] = useState("");
@@ -18,7 +18,10 @@ const LoginPage = () => {
   const userLogin = async (e) => {
     e.preventDefault();
     const verificationStatus = await dispatch(getUserVerificationStatus(email));
-    if (verificationStatus && verificationStatus.userVerificationStatus === true) {
+    if (
+      verificationStatus &&
+      verificationStatus.userVerificationStatus === true
+    ) {
       // Eğer kullanıcı doğrulamışsa giriş yap
       dispatch(Login({ email, password }));
     } else {
@@ -36,8 +39,8 @@ const LoginPage = () => {
 
   return (
     <MainLayout>
-      <main className="w-full  flex flex-col items-center justify-center px-4">
-        <div className="max-w-sm w-full text-gray-600 space-y-8">
+      <main className="w-full flex flex-col items-center justify-center px-4">
+        <div className="max-w-sm w-full text-gray-600 space-y-8 mt-4 shadow-lg bg-gray-100">
           <div className="text-center">
             <div className="mt-5 space-y-2">
               <>
@@ -57,7 +60,7 @@ const LoginPage = () => {
             </div>
           </div>
           <form>
-            <div>
+            <div className="px-4">
               <label className="font-medium mt-3">Email</label>
               <input
                 type="email"
@@ -68,7 +71,7 @@ const LoginPage = () => {
                 placeholder="example@example.com"
               />
             </div>
-            <div>
+            <div className="px-4">
               <label className="font-medium mt-3">Şifre</label>
               <div className="relative">
                 <input
@@ -85,7 +88,7 @@ const LoginPage = () => {
                     setShowPassword(!showPassword);
                   }}
                 >
-                  {showPassword ? <EyeOutlined/> : <EyeInvisibleOutlined/>}
+                  {showPassword ? <EyeOutlined /> : <EyeInvisibleOutlined />}
                 </button>
               </div>
             </div>

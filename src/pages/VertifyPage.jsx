@@ -40,11 +40,7 @@ const VertifyPage = () => {
           </div>
         </div>
         <main className="mt-8 px-5 sm:px-10">
-          <h2 className="text-gray-700 ">
-            {"Merhaba " +
-              (email)  
-            }
-          </h2>
+          <h2 className="text-gray-700 ">{"Merhaba " + email}</h2>
           <div className="flex items-center mt-4 gap-x-4"></div>
           <p className="mt-4 leading-loose text-gray-600">
             Aşağıdaki linke tıklayıp üye olduğunuz

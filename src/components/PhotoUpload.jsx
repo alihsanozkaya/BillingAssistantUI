@@ -1,5 +1,14 @@
 import React, { useState, useEffect } from "react";
-import { Form, Input, Upload, Modal, message, DatePicker, Switch, Button } from "antd";
+import {
+  Form,
+  Input,
+  Upload,
+  Modal,
+  message,
+  DatePicker,
+  Switch,
+  Button,
+} from "antd";
 import axios from "axios";
 import { CameraFilled } from "@ant-design/icons";
 
@@ -11,22 +20,21 @@ import { AddOrder } from "../redux/actions/OrderActions";
 const PhotoUpload = () => {
   const [imageUrl, setImageUrl] = useState("");
   const [imageLength, setImageLength] = useState(0);
-  const [productId, setProductId] = useState(1)
-  const [userId, setUserId] = useState(0)
-  const [quantity, setQuantity] = useState(50)
+  const [productId, setProductId] = useState(1);
+  const [userId, setUserId] = useState(0);
+  const [quantity, setQuantity] = useState(50);
 
-  const auth = useSelector((state) => state.auth)
+  const auth = useSelector((state) => state.auth);
 
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
 
   const handleAddOrder = () => {
-    dispatch(AddOrder({userId,productId,quantity,imageUrl}))
-  }
+    dispatch(AddOrder({ userId, productId, quantity, imageUrl }));
+  };
 
   useEffect(() => {
-    setUserId(auth.user.id)
-  }, [auth,auth.user.id])
-  
+    setUserId(auth.user.id);
+  }, [auth, auth.user.id]);
 
   const onPreview = async (file) => {
     let src = file.url;
@@ -91,30 +99,30 @@ const PhotoUpload = () => {
     });
   };
   return (
-<div className="App">
-<Form>
-      <Form.Item
-        label="Ürün"
-        name="productId"
-        rules={[{ required: true, message: "Ürün ID girilmesi zorunlu" }]}
-        style={{maxWidth: "200px"}}
-        value={productId}
-        onChange={(e) => setProductId(e.target.value)}
-      >
-        <Input />
-      </Form.Item>
-      <Form.Item
-        label="Adet"
-        name="quantity"
-        rules={[{ required: true, message: "Adet girilmesi zorunlu" }]}
-        style={{maxWidth: "200px"}}
-        value={quantity}
-        onChange={(e) => setQuantity(e.target.value)}
-      >
-        <Input />
-      </Form.Item>
-    </Form>
-<ImgCrop rotationSlider>
+    <div className="App">
+      <Form>
+        <Form.Item
+          label="Ürün"
+          name="productId"
+          rules={[{ required: true, message: "Ürün ID girilmesi zorunlu" }]}
+          style={{ maxWidth: "200px" }}
+          value={productId}
+          onChange={(e) => setProductId(e.target.value)}
+        >
+          <Input />
+        </Form.Item>
+        <Form.Item
+          label="Adet"
+          name="quantity"
+          rules={[{ required: true, message: "Adet girilmesi zorunlu" }]}
+          style={{ maxWidth: "200px" }}
+          value={quantity}
+          onChange={(e) => setQuantity(e.target.value)}
+        >
+          <Input />
+        </Form.Item>
+      </Form>
+      <ImgCrop rotationSlider>
         <Upload
           {...uploadProps}
           defaultFileList={imageUrl ? [{ url: imageUrl, name: "image" }] : []}
@@ -129,8 +137,10 @@ const PhotoUpload = () => {
         </Upload>
       </ImgCrop>
 
-      <button className="btn btn-primary" onClick={handleAddOrder}>Fatura ekle</button>
-</div>
+      <button className="btn btn-primary" onClick={handleAddOrder}>
+        Fatura ekle
+      </button>
+    </div>
   );
 };
 

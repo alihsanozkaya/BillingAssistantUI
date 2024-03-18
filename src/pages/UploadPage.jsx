@@ -7,9 +7,8 @@ const UploadPage = () => {
     <MainLayout>
       <div className="App">
         <h2>Fatura Yükleme Sayfası</h2>
-          <PhotoUpload />
+        <PhotoUpload />
       </div>
-          
     </MainLayout>
   );
 };

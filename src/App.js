@@ -31,11 +31,11 @@ function App() {
         <Route path="/about" element={<AboutPage />} />
         <Route path="/register" element={<RegisterPage />} />
         <Route path="/login" element={<LoginPage />} />
-        <Route path="/upload" element={<UploadPage />} />
+        <Route path="/upload" element={<PrivateRoute><UploadPage /></PrivateRoute> } />
         <Route path="/pricing" element={<PricingPage />} />
-        <Route path="/profile" element={<PrivateRoute><ProfilePage /></PrivateRoute>} />
+        <Route path="/my-profile" element={<PrivateRoute><ProfilePage /></PrivateRoute>} />
         <Route path="/verified/:email" element={<VertifyPage />} />
-        <Route path="/properties" element={<PrivateRoute><PropertiesPage /></PrivateRoute>} />
+        <Route path="/properties" element={<PropertiesPage />} />
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
     </Router>

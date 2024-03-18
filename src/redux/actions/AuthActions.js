@@ -53,7 +53,8 @@ export const Login = (user) => async (dispatch) => {
 export const register = (user) => async (dispatch) => {
   try {
     dispatch({ type: REGISTER_REQUEST });
-    const res = await axios.post("https://localhost:7032/api/Auths/register", user);
+   // const res = await axios.post("https://localhost:7032/api/Auths/register", user);
+    const res = await axios.post("https://billingassistantapi.somee.com/api/Auths/register", user);
 
     // Success
     if (res.status >= 200 && res.status <= 205) {

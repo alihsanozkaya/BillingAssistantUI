@@ -6,7 +6,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { logout } from "../../redux/actions/AuthActions";
 import { LoggedInHeader } from "./LoggedInHeader";
 import { NotLoggedInHeader } from "./NotLoggedInHeader";
-import logo from "../../images/bill-icon-logo-vector.jpg"  
+import logo from "../../images/bill-icon-logo-vector.jpg";
 
 const MobileMenu = ({ onClose }) => {
   const auth = useSelector((state) => state.auth);
@@ -88,7 +88,12 @@ const MainHeader = () => {
   const auth = useSelector((state) => state.auth);
 
   return (
-<header style={{background: "linear-gradient(to right, rgba(249, 215, 28, 0.5), rgba(107, 45, 159, 0.5))"}}>
+    <header
+      style={{
+        background:
+          "linear-gradient(to right, rgba(249, 215, 28, 0.5), rgba(107, 45, 159, 0.5))",
+      }}
+    >
       <nav
         className="mx-auto flex max-w-7xl items-center justify-between p-2 lg:px-8"
         aria-label="Global"
@@ -96,11 +101,7 @@ const MainHeader = () => {
         <div className="flex lg:flex-1">
           <Link to="/" className="-m-1.5 p-1.5">
             <span className="sr-only">Your Company</span>
-            <img
-              className="h-12 w-auto"
-              src= {logo}
-              alt=""
-            />
+            <img className="h-12 w-auto" src={logo} alt="" />
           </Link>
         </div>
         <div className="flex lg:hidden">
@@ -114,21 +115,21 @@ const MainHeader = () => {
           </button>
         </div>
         <Popover.Group className="hidden lg:flex lg:gap-x-12">
-        <Link
+          <Link
             to="/about"
-            className="text-sm font-semibold leading-6 p-2 rounded-lg hover:no-underline hover:bg-white"
+            className="text-sm font-semibold leading-7 p-2 rounded-lg hover:no-underline hover:bg-white"
           >
             Hakkımızda
           </Link>
           <Link
             to="/properties"
-            className="text-sm font-semibold leading-6 p-2 rounded-lg hover:no-underline hover:bg-white"
+            className="text-sm font-semibold leading-7 p-2 rounded-lg hover:no-underline hover:bg-white"
           >
             Özellikler
           </Link>
           <Link
             to="/pricing"
-            className="text-sm font-semibold leading-6 p-2 rounded-lg hover:no-underline hover:bg-white"
+            className="text-sm font-semibold leading-7 p-2 rounded-lg hover:no-underline hover:bg-white"
           >
             Ücretlendirme
           </Link>
