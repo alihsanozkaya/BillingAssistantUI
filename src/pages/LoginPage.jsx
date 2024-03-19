@@ -5,7 +5,7 @@ import { Login, getUserVerificationStatus } from "../redux/actions/AuthActions";
 import { Link, useNavigate } from "react-router-dom";
 import { message } from "antd";
 import { EyeOutlined, EyeInvisibleOutlined } from "@ant-design/icons";
-
+import { useTranslation } from "react-i18next";
 const LoginPage = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -15,6 +15,8 @@ const LoginPage = () => {
   const dispatch = useDispatch();
   const auth = useSelector((state) => state.auth);
   const token = localStorage.getItem("token");
+  
+  const {t} = useTranslation()
   const userLogin = async (e) => {
     e.preventDefault();
     const verificationStatus = await dispatch(getUserVerificationStatus(email));
@@ -48,7 +50,7 @@ const LoginPage = () => {
                   Giriş yap
                 </h3>
                 <p className="">
-                  Bir hesabınız yoksa{" "}
+                {t('loginPage.description')}
                   <Link
                     to="/register"
                     className="font-medium text-indigo-600 hover:text-indigo-500"

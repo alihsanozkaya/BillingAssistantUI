@@ -7,7 +7,8 @@ import { logout } from "../../redux/actions/AuthActions";
 import { LoggedInHeader } from "./LoggedInHeader";
 import { NotLoggedInHeader } from "./NotLoggedInHeader";
 import logo from "../../images/bill-icon-logo-vector.jpg";
-
+import LanguageModal from "../Modal/LanguageModal";
+import { useTranslation } from "react-i18next";
 const MobileMenu = ({ onClose }) => {
   const auth = useSelector((state) => state.auth);
   const navigate = useNavigate();
@@ -18,6 +19,7 @@ const MobileMenu = ({ onClose }) => {
     onClose();
   };
 
+  const { t } = useTranslation();
   return (
     <div className="lg:hidden">
       <Link
@@ -87,6 +89,16 @@ const MainHeader = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const auth = useSelector((state) => state.auth);
 
+  const [showLanguageModal, setShowLanguageModal] = useState(false);
+
+  const handleShowLanguageModal = () => {
+    setShowLanguageModal(true);
+  };
+  const handleCloseLanguageModal = () => {
+    setShowLanguageModal(false);
+  };
+
+  const { t } = useTranslation();
   return (
     <header
       style={{
@@ -131,12 +143,23 @@ const MainHeader = () => {
             to="/pricing"
             className="text-sm font-semibold leading-7 p-2 rounded-lg hover:no-underline hover:bg-white"
           >
+            {/* {t('header.pay')} */}
             Ücretlendirme
           </Link>
         </Popover.Group>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
           {auth.entrance ? <LoggedInHeader /> : <NotLoggedInHeader />}
         </div>
+        {/* <div>
+          <i
+            class="fa-solid fa-globe me-3 ms-4 mt-1"
+            onClick={handleShowLanguageModal}
+          ></i>
+          <LanguageModal
+            showLanguageModal={showLanguageModal}
+            handleCloseLanguageModal={handleCloseLanguageModal}
+          />
+        </div> */}
       </nav>
       <Dialog
         as="div"

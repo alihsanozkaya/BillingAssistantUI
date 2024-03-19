@@ -1,0 +1,15 @@
+{
+    "header" : {
+        "login" : "Sign In",
+        "mybills" : "My bills",
+        "complain" : "Complain",
+        "pay" : "Pay",
+        "general": "General"
+
+
+        
+    },
+    "loginPage" : {
+        "description" : "dasdasada  "
+    }
+ }

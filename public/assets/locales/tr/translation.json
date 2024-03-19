@@ -1,0 +1,15 @@
+{
+    "header" : {
+        "login" : "Giriş yap",
+        "mybills" : "My bdsaasdasddasills",
+        "complain" : "Codsaasdasdasdmplain",
+        "pay" : "Psaddsaasddasay",
+        "general": "Genddasdasdaeral"
+
+
+        
+    },
+    "loginPage" : {
+        "description" : "Bir hesabınız yoksa Üye ol "
+    }
+ }

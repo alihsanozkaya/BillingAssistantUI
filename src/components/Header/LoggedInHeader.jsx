@@ -11,6 +11,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
 import { logout } from "../../redux/actions/AuthActions";
 import { Button } from "antd";
+import { useTranslation } from "react-i18next";
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
