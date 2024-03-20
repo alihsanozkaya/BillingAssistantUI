@@ -1,22 +1,25 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 const MainFooter = () => {
+  const { t } = useTranslation();
+
   const footerNavs = [
     {
       href: "/",
-      name: "Şartlar",
+      name: t("footer.conditions"),
     },
     {
       href: "/",
-      name: "Lisans",
+      name: t("footer.licence"),
     },
     {
       href: "/",
-      name: "Gizlilik",
+      name: t("footer.security"),
     },
     {
       href: "/",
-      name: "Hakkımızda",
+      name: t("footer.aboutUs"),
     },
   ];
 
@@ -36,7 +39,7 @@ const MainFooter = () => {
             </ul>
           </div>
           <div className="mt-6">
-            <p className="text-gray-700 font-semibold">Mobil Uygulamamız</p>
+            <p className="text-gray-700 font-semibold">{t("footer.mobileApplication")}</p>
             <div className="flex items-center gap-3 mt-3 sm:block">
               <a href="/">
                 <svg className="w-32" fill="none" viewBox="0 0 338 100">
@@ -314,7 +317,7 @@ const MainFooter = () => {
           </div>
         </div>
         <div className="mt-10 py-10 border-t md:text-center">
-          <p>© 2024 Fatura Asistanı</p>
+          <p>{t("global.copyright")}</p>
         </div>
       </div>
     </footer>

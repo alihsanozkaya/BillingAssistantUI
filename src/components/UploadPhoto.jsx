@@ -17,7 +17,7 @@ import ImgCrop from "antd-img-crop";
 import moment from "moment";
 import { useDispatch, useSelector } from "react-redux";
 import { AddOrder } from "../redux/actions/OrderActions";
-const PhotoUpload = () => {
+const UploadPhoto = () => {
   const [imageUrl, setImageUrl] = useState("");
   const [imageLength, setImageLength] = useState(0);
   const [productId, setProductId] = useState(1);
@@ -144,4 +144,4 @@ const PhotoUpload = () => {
   );
 };
 
-export default PhotoUpload;
+export default UploadPhoto;

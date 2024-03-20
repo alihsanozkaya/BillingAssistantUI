@@ -1,17 +1,11 @@
 import React, { Fragment } from "react";
-
-import { Dialog, Disclosure, Popover, Transition } from "@headlessui/react";
-
-import {
-  ChevronDownIcon,
-  PhoneIcon,
-  PlayCircleIcon,
-} from "@heroicons/react/20/solid";
+import { Popover, Transition } from "@headlessui/react";
+import {  ChevronDownIcon } from "@heroicons/react/20/solid";
 import { useDispatch, useSelector } from "react-redux";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { logout } from "../../redux/actions/AuthActions";
-import { Button } from "antd";
 import { useTranslation } from "react-i18next";
+
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
@@ -24,11 +18,12 @@ export const LoggedInHeader = () => {
     dispatch(logout());
   };
   const auth = useSelector((state) => state.auth);
+  const { t } = useTranslation();
   return (
     <Popover.Group className="hidden lg:flex lg:gap-x-12">
       <Popover className="relative">
         <Popover.Button className="flex items-center gap-x-1 text-sm font-semibold leading-6 p-2 rounded-lg hover:no-underline hover:bg-white">
-          Hesabım
+        {t("header.myAccount")}
           <ChevronDownIcon
             className="h-5 w-5 flex-none text-gray-400"
             aria-hidden="true"
@@ -57,15 +52,15 @@ export const LoggedInHeader = () => {
                   className="text-sm font-semibold leading-7 p-2 mt-2 rounded-lg hover:no-underline hover:bg-white"
                   onClick={() => navigate("/my-profile", { replace: true })}
                 >
-                  Profilim
+                {t("header.myProfile")}
                 </button>
               </div>
               <div class="flex flex-1 justify-between items-center">
                 <button
                   className="text-sm font-semibold leading-7 p-2 mt-2 rounded-lg hover:no-underline hover:bg-white"
-                  onClick={() => navigate("/upload", { replace: true })}
+                  onClick={() => navigate("/my-invoices", { replace: true })}
                 >
-                  Faturalarım
+                {t("header.myBills")}
                 </button>
               </div>
               <div class="flex flex-1 justify-between items-center">
@@ -73,7 +68,7 @@ export const LoggedInHeader = () => {
                   onClick={LogoutHandler}
                   className="text-sm font-semibold leading-7 p-2 mt-2 rounded-lg hover:no-underline hover:bg-white"
                 >
-                  Çıkış yap
+                {t("header.logout")}
                 </button>
               </div>
             </div>

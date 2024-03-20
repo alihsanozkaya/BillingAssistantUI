@@ -1,15 +1,103 @@
 {
-    "header" : {
+    "global" : {
         "login" : "Giriş yap",
-        "mybills" : "My bdsaasdasddasills",
-        "complain" : "Codsaasdasdasdmplain",
-        "pay" : "Psaddsaasddasay",
-        "general": "Genddasdasdaeral"
-
-
-        
+        "register" : "Üye ol",
+        "name" : "Ad",
+        "surname" : "Soyad",
+        "email" : "Email",
+        "password" : "Şifre",
+        "update" : "Güncelle",
+        "copyright" : "© 2024 Fatura Asistanı",
+        "hello" : "Merhaba"
+    },
+    "header" : {
+        "about" : "Hakkımızda",
+        "properties" : "Özellikler",
+        "pricing" : "Ücretlendirme",
+        "logout" : "Çıkış yap",
+        "myAccount" : "Hesabım",
+        "myProfile" : "Profil",
+        "myBills" : "Faturalarım",
+        "language" : {
+            "languageAndRegion" : "Dil ve Bölge",
+            "choose" : "seç"
+        }        
+    },
+    "footer" : {
+        "conditions" : "Şartlar",
+        "licence" : "Lisans",
+        "security" : "Gizlilik",
+        "aboutUs" : "Hakkımızda",
+        "mobileApplication" : "Mobil Uygulamamız"
+    },
+    "mainPage" : {
+        "header" : "Fatura Bilgi Sistemi'ne \nHoş Geldiniz!",
+        "description1" : "Artık faturalarınızı hiç olmadığı kadar etkili bir şekilde yönetebilirsiniz!",
+        "description2" : "Hemen başlamak için giriş yapın veya kayıt olun. Haydi, finansal kontrolü ele alın ve kolaylığın keyfini çıkarın!"
+    },
+    "aboutPage" : {
+        "header" : "Hakkımızda",
+        "description" : "Merhaba, Ben Ali İhsan Özkaya, fatura asistanı projesinin geliştiricisiyim. Web alanında tutkulu biriyim. Fatura asistanı projesi, kullanıcıların fatura işlemlerini daha verimli ve hızlı bir şekilde yönetmelerine yardımcı olmak amacıyla tasarlandı. Bu platform, kullanıcıların fatura belgelerini yükleyerek otomatik olarak tanımlamalarını ve fatura detaylarına erişmelerini sağlar. Ayrıca, kullanıcılara faturalarını takip etmeleri ve düzenlemeleri için gerekli araçları sunar. Projeyi oluştururken, kullanıcı deneyimi ve veri güvenliği konularına büyük önem verdik. Kullanıcıların kolayca gezinebilmeleri ve işlemlerini güvenli bir şekilde gerçekleştirebilmeleri için arayüz tasarımına özen gösterdik. Ayrıca, kullanıcıların kişisel ve hassas bilgilerinin korunmasını sağlamak için güçlü güvenlik önlemleri uyguladık. Bu projeyi geliştirirken, kullanıcıların geri bildirimlerini dikkate alarak sürekli olarak iyileştirmeler yapıyoruz. Kullanıcıların ihtiyaçlarına daha iyi yanıt verebilmek ve platformu daha işlevsel hale getirebilmek için sürekli olarak yeni özellikler ekliyoruz ve mevcut özellikleri geliştiriyoruz. Eğer herhangi bir geri bildiriminiz, sorununuz veya projemiz hakkında bir öneriniz varsa, lütfen bize ulaşmaktan çekinmeyin. Kullanıcıların ihtiyaçlarını anlamak ve platformumuzu geliştirmek için sizin geri bildiriminize her zaman ihtiyacımız var."
+    },
+    "propertiesPage" : {
+        "header" : "PDF Formatındaki Faturaların Otomatik Tanıma (OCR) ile Veritabanına Kaydedilmesi",
+        "description1" : "Günümüzde birçok işletme, faturaları elle girmek ve işlemek için zaman ve kaynak harcamaktadır. Ancak, teknolojinin gelişmesiyle birlikte, PDF formatındaki faturaların otomatik tanıma sistemleriyle işlenmesi mümkün hale gelmiştir. Optik Karakter Tanıma (OCR) teknolojisi, PDF formatındaki faturaları dijital metin formatına dönüştürerek veritabanına kaydetmeye olanak tanır. İşte bu süreç genellikle şu adımları içerir:",
+        "description2" : "PDF formatındaki faturaların OCR ile veritabanına kaydedilmesi, işletmeler için zaman ve kaynak tasarrufu sağlar. Ayrıca, bu süreç sayesinde veri doğruluğu artar ve insan hataları en aza indirilir. Bu da işletmelerin daha verimli ve etkin bir şekilde çalışmasını sağlar.",
+        "description3" : "Sonuç olarak, PDF formatındaki faturaların otomatik tanıma sistemiyle işlenmesi, işletmelerin iş süreçlerini otomatikleştirmesine ve modernize etmesine yardımcı olur, böylece daha hızlı ve verimli bir şekilde faaliyet gösterirler.",
+        "li1" : "PDF'nin Alınması: Fatura PDF formatında taranır veya dijital olarak elde edilir.",
+        "li2" : "OCR İşlemi: Alınan PDF, OCR yazılımı veya hizmeti kullanılarak metin formatına dönüştürülür. OCR, PDF dosyasındaki metinleri tanıyarak dijital metin verisini oluşturur.",  
+        "li3" : "Veri Doğrulama ve Düzenleme: Elde edilen metin verisi, doğrulanır ve gerektiğinde düzenlenir. Bu aşamada, OCR'in hatalı tanıdığı karakterler düzeltilir ve eksik veya yanlış bilgiler eklenir veya değiştirilir.",   
+        "li4" : "Veritabanına Kaydetme: Doğrulanmış ve düzenlenmiş metin verisi, bir veritabanı yönetim sistemine kaydedilir. Fatura ile ilgili bilgiler (fatura numarası, tarih, tutar vb.) uygun veritabanı tablolarına aktarılır."        
+    },
+    "pricingPage" : {
+        "header" : "Ücretlendirme",
+        "type1" : "Standart",
+        "type2" : "Premium",
+        "membership" : "Üyelik",
+        "free" : "Ücretsiz",
+        "btn" : "Erişim sahibi ol",
+        "description1" : "Bir kez ödeyin, sonsuza kadar sahip olun",
+        "description2" : "Kolay şirket geri ödemesi için faturalar ve makbuzlar mevcuttur"
     },
     "loginPage" : {
-        "description" : "Bir hesabınız yoksa Üye ol "
+        "description" : "Bir hesabınız yoksa"
+    },
+    "registerPage" : {
+        "description" : "Bir hesabınız varsa",
+        "confirmPassword" : "Tekrardan Şifre",
+        "placeholder1" : "Adınızı giriniz",
+        "placeholder2" : "Soyadınızı giriniz"
+    },
+    "profilePage" : {
+        "myProfile" : "Profilim",
+        "placeholder1" : "Adınızı giriniz",
+        "placeholder2" : "Soyadınızı giriniz"
+    },
+    "sendEmailModal" : {
+        "title" :  "Başarıyla üye oldunuz.",
+        "subTitle" : "Aktif olarak kullanabilmeniz için email doğrulamanızı yapmanız gerekiyor.",
+        "extra" : {
+            "btn" : "Doğrulama emaili gelmediyse, tıklayınız",
+            "link" : "Anasayfaya geri dönmek için"
+        }
+    },
+    "myInvoicesPage" : {
+        "header" : "Faturalarım",
+        "upload" : "Fatura yükle"
+    },
+    "notFoundPage" : {
+        "header" : "Sayfa bulunamadı",
+        "description" : "Üzgünüz, aradığınız sayfayı bulamadık.",
+        "link1" : "Anasayfaya dön",
+        "link2" : "Destek al"
+    },
+    "vertifyPage" : {
+        "thanksMessage" : "ÜYE OLDUĞUNUZ İÇİN TEŞEKKÜRLER!",
+        "vertifyMessage" : "Email adresinizi doğrulayınız",
+        "description" : "Aşağıdaki linke tıklayıp üye olduğunuz email adresinizi doğrulayabilirsiniz.",
+        "btn" : "Email Doğrula"
+    },
+    "uploadInvoicePage" : {
+        
     }
- }
+}

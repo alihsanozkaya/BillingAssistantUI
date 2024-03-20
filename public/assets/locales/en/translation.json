@@ -1,15 +1,100 @@
 {
+    "global" : {
+        "login" : "Sign in",
+        "register" : "Sign up",
+        "name" : "Name",
+        "surname" : "Surname",
+        "email" : "Email",
+        "password" : "Password",
+        "update" : "Update",
+        "copyright" : "© 2024 Billing Assistant",
+        "hello" : "Hello"
+    },
     "header" : {
-        "login" : "Sign In",
-        "mybills" : "My bills",
-        "complain" : "Complain",
-        "pay" : "Pay",
-        "general": "General"
-
-
-        
+        "about" : "About us",
+        "properties" : "Properties",
+        "pricing" : "Pricing",
+        "logout" : "Log out",
+        "myAccount" : "My account",
+        "myProfile" : "Profile",
+        "myBills" : "My bills",
+        "language" : {
+            "languageAndRegion" : "Language and Region",
+            "choose" : "choose"
+        }        
+    },
+    "footer" : {
+        "conditions" : "Conditions",
+        "licence" : "Licence",
+        "security" : "Security",
+        "aboutUs" : "About Us",
+        "mobileApplication" : "Our Mobile Application"
+    },
+    "mainPage" : {
+        "header" : "Welcome to the Invoice Information System!",
+        "description1" : "Now you can manage your bills more effectively than ever!",
+        "description2" : "Log in or register to get started now. Come on, take financial control and enjoy convenience!"
+    },
+    "aboutPage" : {
+        "header" : "About us",
+        "description" : "Hello, I am Ali İhsan Özkaya, the developer of the invoice assistant project. I am passionate about the web field. The invoice assistant project was designed to help users manage their invoice transactions more efficiently and quickly. This platform allows users to automatically identify and access invoice details by uploading invoice documents. It also gives users the necessary tools to track and organize their invoices. While creating the project, we paid great attention to user experience and data security. We paid attention to the interface design so that users can navigate easily and perform their transactions safely. We have also implemented strong security measures to ensure that users' personal and sensitive information is protected. While developing this project, we are constantly making improvements, taking into account users' feedback. We are constantly adding new features and improving existing features to better respond to users' needs and make the platform more functional. If you have any feedback, problems or suggestions about our project, please feel free to contact us. We always need your feedback to understand users' needs and improve our platform."
+    },
+    "propertiesPage" : {
+        "header" : "Saving Invoices in PDF Format to the Database with Automatic Recognition (OCR)",
+        "description1" : "Many businesses today waste time and resources entering and processing invoices manually. However, with the development of technology, it has become possible to process PDF format invoices with automatic recognition systems. Optical Character Recognition (OCR) technology allows converting PDF invoices into digital text format and saving them to the database. This process usually includes these steps:",
+        "description2" : "Saving invoices in PDF format to the database with OCR saves time and resources for businesses. Additionally, thanks to this process, data accuracy is increased and human errors are minimized. This allows businesses to operate more efficiently and effectively.",
+        "description3" : "As a result, processing PDF invoices with an automatic recognition system helps businesses automate and streamline their business processes, so they operate faster and more efficiently.",
+        "li1" : "Retrieving PDF: The invoice is scanned or obtained digitally in PDF format.",
+        "li2" : "OCR Process: The received PDF is converted to text format using OCR software or service. OCR creates digital text data by recognizing the texts in the PDF file.",  
+        "li3" : "Data Validation and Editing: The resulting text data is verified and edited when necessary. At this stage, characters incorrectly recognized by OCR are corrected and missing or incorrect information is added or replaced.",   
+        "li4" : "Saving to Database: Verified and edited text data is saved to a database management system. Information about the invoice (invoice number, date, amount, etc.) is transferred to the appropriate database tables."        
+    },
+    "pricingPage" : {
+        "header" : "Pricing",
+        "type1" : "Standard",
+        "type2" : "Premium",
+        "membership" : "Membership",
+        "free" : "Free",
+        "btn" : "Get access",
+        "description1" : "Pay once, own forever",
+        "description2" : "Invoices and receipts available for easy company reimbursement"
     },
     "loginPage" : {
-        "description" : "if you dont have account sign up  "
+        "description" : "If you don't have an account"
+    },
+    "registerPage" : {
+        "description" : "If you have an account",
+        "confirmPassword" : "Confirm Password",
+        "placeholder1" : "Enter your name",
+        "placeholder2" : "Enter your surname"
+    },
+    "profilePage" : {
+        "myProfile" : "My Profile",
+        "placeholder1" : "Enter your name",
+        "placeholder2" : "Enter your surname"
+    },
+    "sendEmailModal" : {
+        "title" :  "You have successfully registered.",
+        "subTitle" : "In order to use it actively, you need to verify your email.",
+        "extra" : {
+            "btn" : "If you have not received a verification email, click here",
+            "link" : "To return to the homepage"
+        }
+    },
+    "myInvoicesPage" : {
+        "header" : "My Invoices",
+        "upload" : "Upload invoice"
+    },
+    "notFoundPage" : {
+        "header" : "Not found page",
+        "description" : "Sorry, we couldn't find the page you were looking for.",
+        "link1" : "Return to homepage",
+        "link2" : "Get support"
+    },
+    "vertifyPage" : {
+        "thanksMessage" : "THANKS FOR SIGNING UP!",
+        "vertifyMessage" : "Verify your email address",
+        "description" : "You can verify your registered email address by clicking on the link below.",
+        "btn" : "Verify Email"
     }
- }
+}

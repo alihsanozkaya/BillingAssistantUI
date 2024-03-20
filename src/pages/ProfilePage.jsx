@@ -1,15 +1,14 @@
 import React, { useEffect, useState } from "react";
 import MainLayout from "../layouts/MainLayout";
 import { useDispatch, useSelector } from "react-redux";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { register as _register, sendEmail } from "../redux/actions/AuthActions";
-import { Button, message } from "antd";
 import {
   EyeOutlined,
   EyeInvisibleOutlined,
   EditFilled,
 } from "@ant-design/icons";
-import SuccessResult from "../components/Results/SuccessResult";
+import { useTranslation } from "react-i18next";
 
 const ProfilePage = () => {
   const [firstname, setFirstname] = useState("");
@@ -22,6 +21,7 @@ const ProfilePage = () => {
   const [disabled, setDisabled] = useState(true);
 
   const navigate = useNavigate();
+  const { t } = useTranslation();
 
   const dispatch = useDispatch();
   const auth = useSelector((state) => state.auth);
@@ -60,39 +60,41 @@ const ProfilePage = () => {
           <div className="text-center mt-3">
             <div className="m-2 space-y-2">
               <h3 className="text-gray-800 text-2xl font-bold sm:text-3xl">
-                Profilim
+                {t("profilePage.myProfile")}
               </h3>
             </div>
           </div>
           <form>
             <div className="px-4">
-              <label className="font-medium mt-3">Ad</label>
+              <label className="font-medium mt-3">
+                {t("global.name")}
+              </label>
               <input
                 type="name"
                 required
                 className="w-full h-full px-3 py-2 text-gray-500 outline-none border focus:border-indigo-600 shadow-sm rounded-lg"
                 value={disabled ? auth.user.firstName : firstname}
                 onChange={(e) => setFirstname(e.target.value)}
-                placeholder="Adınızı giriniz"
+                placeholder={t("profilePage.placeholder1")}
                 disabled={disabled}
                 style={{ backgroundColor: disabled ? "transparent" : "white" }}
               />
             </div>
             <div className="px-4">
-              <label className="font-medium mt-3">Soyad</label>
+              <label className="font-medium mt-3">{t("global.surname")}</label>
               <input
                 type="name"
                 required
                 className="w-full h-full px-3 py-2 text-gray-500 outline-none border focus:border-indigo-600 shadow-sm rounded-lg"
                 value={disabled ? auth.user.lastName : lastname}
                 onChange={(e) => setLastname(e.target.value)}
-                placeholder="Soyadınızı giriniz"
+                placeholder={t("profilePage.placeholder2")}
                 disabled={disabled}
                 style={{ backgroundColor: disabled ? "transparent" : "white" }}
               />
             </div>
             <div className="px-4">
-              <label className="font-medium mt-3">Email</label>
+              <label className="font-medium mt-3">{t("global.email")}</label>
               <input
                 type="email"
                 required
@@ -105,7 +107,7 @@ const ProfilePage = () => {
               />
             </div>
             <div className="px-4">
-              <label className="font-medium mt-3">Şifre</label>
+              <label className="font-medium mt-3">{t("global.password")}</label>
               <div className="relative">
                 <input
                   type={showPassword ? "text" : "password"}
@@ -130,7 +132,7 @@ const ProfilePage = () => {
               </div>
             </div>
             <div className="px-4">
-              <label className="font-medium mt-3">Tekrardan Şifre</label>
+              <label className="font-medium mt-3">{t("registerPage.confirmPassword")}</label>
               <div className="relative mb-4">
                 <input
                   type={showConfirmPassword ? "text" : "password"}
@@ -160,7 +162,7 @@ const ProfilePage = () => {
               onClick={userSignUp}
               hidden={disabled ? "hidden" : ""}
             >
-              Güncelle
+              {t("global.update")}
             </button>
           </form>
         </div>

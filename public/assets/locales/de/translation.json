@@ -1,15 +1,100 @@
 {
+    "global" : {
+        "login" : "Anmeldung",
+        "register" : "Registrieren",
+        "name" : "Name",
+        "surname" : "Nachname",
+        "email" : "Email",
+        "password" : "Passwort",
+        "update" : "Aktualisieren",
+        "copyright" : "© 2024 Abrechnungsassistent",
+        "hello" : "Hallo"
+    },
     "header" : {
-        "login" : "Sign In",
-        "mybills" : "My bills",
-        "complain" : "Complain",
-        "pay" : "Pay",
-        "general": "General"
-
-
-        
+        "about" : "Um",
+        "properties" : "Eigenschaften",
+        "pricing" : "Preisgestaltung",
+        "logout" : "Ausloggen",
+        "myAccount" : "Mein Konto",
+        "myProfile" : "Mein Profil",
+        "myBills" : "Meine Rechnungen",
+        "language" : {
+            "languageAndRegion" : "Sprache und Region",
+            "choose" : "wählen"
+        }        
+    },
+    "footer" : {
+        "conditions" : "Bedingungen",
+        "licence" : "Lizenz",
+        "security" : "Sicherheit",
+        "aboutUs" : "Über uns",
+        "mobileApplication" : "Mobile Applikation"
+    },
+    "mainPage" : {
+        "header" : "Willkommen im Rechnungsinformationssystem!",
+        "description1" : "Jetzt können Sie Ihre Rechnungen effektiver als je zuvor verwalten!",
+        "description2" : "Melden Sie sich an oder registrieren Sie sich, um jetzt loszulegen. Kommen Sie, übernehmen Sie die finanzielle Kontrolle und genießen Sie die Bequemlichkeit!"
+    },
+    "aboutPage" : {
+        "header" : "Über uns",
+        "description" : "Hallo, ich bin Ali İhsan Özkaya, der Entwickler des Rechnungsassistentenprojekts. Ich interessiere mich leidenschaftlich für den Webbereich. Das Projekt Rechnungsassistent wurde entwickelt, um Benutzern dabei zu helfen, ihre Rechnungstransaktionen effizienter und schneller zu verwalten. Diese Plattform ermöglicht es Benutzern, Rechnungsdetails automatisch zu identifizieren und darauf zuzugreifen, indem sie Rechnungsdokumente hochladen. Außerdem erhalten Benutzer die notwendigen Tools, um ihre Rechnungen zu verfolgen und zu organisieren. Bei der Erstellung des Projekts haben wir großen Wert auf Benutzererfahrung und Datensicherheit gelegt. Wir haben auf das Interface-Design geachtet, damit Benutzer einfach navigieren und ihre Transaktionen sicher durchführen können. Wir haben außerdem strenge Sicherheitsmaßnahmen implementiert, um sicherzustellen, dass die persönlichen und sensiblen Daten der Benutzer geschützt sind. Bei der Entwicklung dieses Projekts nehmen wir kontinuierlich Verbesserungen vor und berücksichtigen dabei das Feedback der Benutzer. Wir fügen ständig neue Funktionen hinzu und verbessern bestehende Funktionen, um besser auf die Bedürfnisse der Benutzer einzugehen und die Plattform funktionaler zu machen. Wenn Sie Feedback, Probleme oder Anregungen zu unserem Projekt haben, können Sie sich gerne an uns wenden. Wir benötigen immer Ihr Feedback, um die Bedürfnisse der Benutzer zu verstehen und unsere Plattform zu verbessern."
+    },
+    "propertiesPage" : {
+        "header" : "Speichern von Rechnungen im PDF-Format in der Datenbank mit automatischer Erkennung (OCR)",
+        "description1" : "Heutzutage verschwenden viele Unternehmen Zeit und Ressourcen mit der manuellen Eingabe und Bearbeitung von Rechnungen. Mit der Entwicklung der Technologie ist es jedoch möglich geworden, Rechnungen im PDF-Format mit automatischen Erkennungssystemen zu verarbeiten. Die OCR-Technologie (Optical Character Recognition) ermöglicht die Konvertierung von PDF-Rechnungen in ein digitales Textformat und deren Speicherung in der Datenbank. Dieser Prozess umfasst normalerweise die folgenden Schritte:",
+        "description2" : "Das Speichern von Rechnungen im PDF-Format in der Datenbank mit OCR spart Zeit und Ressourcen für Unternehmen. Darüber hinaus wird durch diesen Prozess die Datengenauigkeit erhöht und menschliche Fehler minimiert. Dadurch können Unternehmen effizienter und effektiver arbeiten.",
+        "description3" : "Dadurch hilft die Verarbeitung von PDF-Rechnungen mit einem automatischen Erkennungssystem Unternehmen, ihre Geschäftsprozesse zu automatisieren und zu rationalisieren, sodass sie schneller und effizienter arbeiten können.",
+        "li1" : "PDF abrufen: Die Rechnung wird gescannt oder digital im PDF-Format bezogen.",
+        "li2" : "OCR-Prozess: Das empfangene PDF wird mithilfe einer OCR-Software oder eines OCR-Dienstes in ein Textformat konvertiert. OCR erstellt digitale Textdaten durch die Erkennung der Texte in der PDF-Datei.",  
+        "li3" : "Datenvalidierung und -bearbeitung: Die resultierenden Textdaten werden überprüft und bei Bedarf bearbeitet. In dieser Phase werden von OCR falsch erkannte Zeichen korrigiert und fehlende oder falsche Informationen hinzugefügt oder ersetzt.",   
+        "li4" : "Speichern in der Datenbank: Verifizierte und bearbeitete Textdaten werden in einem Datenbankverwaltungssystem gespeichert. Informationen zur Rechnung (Rechnungsnummer, Datum, Betrag usw.) werden in die entsprechenden Datenbanktabellen übertragen."        
+    },
+    "pricingPage" : {
+        "header" : "Preisgestaltung",
+        "type1" : "Standard",
+        "type2" : "Prämie",
+        "membership" : "Mitgliedschaft",
+        "free" : "Frei",
+        "btn" : "Zugang erhalten",
+        "description1" : "Einmal zahlen, für immer besitzen",
+        "description2" : "Rechnungen und Quittungen stehen für eine einfache Rückerstattung durch das Unternehmen zur Verfügung"
     },
     "loginPage" : {
-        "description" : "dasdasada  "
+        "description" : "Wenn Sie kein Konto haben"
+    },
+    "registerPage" : {
+        "description" : "Wenn Sie ein Konto haben",
+        "confirmPassword" : "Bestätige das Passwort",
+        "placeholder1" : "Gib deinen Namen ein",
+        "placeholder2" : "Geben Sie Ihren Nachnamen ein"
+    },
+    "profilePage" : {
+        "myProfile" : "Mein Profil",
+        "placeholder1" : "Gib deinen Namen ein",
+        "placeholder2" : "Geben Sie Ihren Nachnamen ein"
+    },
+    "sendEmailModal" : {
+        "title" :  "Sie haben sich erfolgreich registriert.",
+        "subTitle" : "Um es aktiv nutzen zu können, müssen Sie Ihre E-Mail-Adresse bestätigen.",
+        "extra" : {
+            "btn" : "Wenn Sie keine Bestätigungs-E-Mail erhalten haben, klicken Sie hier",
+            "link" : "Um zur Homepage zurückzukehren"
+        }
+    },
+    "myInvoicesPage" : {
+        "header" : "Meine Rechnungen",
+        "upload" : "Rechnung hochladen"
+    },
+    "notFoundPage" : {
+        "header" : "Seite nicht gefunden",
+        "description" : "Leider konnten wir die von Ihnen gesuchte Seite nicht finden.",
+        "link1" : "Zur Startseite zurückkehren",
+        "link2" : "Hole dir Unterstützung"
+    },
+    "vertifyPage" : {
+        "thanksMessage" : "DANKE FÜR'S REGISTRIEREN!",
+        "vertifyMessage" : "Bestätige deine Email-Adresse",
+        "description" : "Sie können Ihre registrierte E-Mail-Adresse überprüfen, indem Sie auf den untenstehenden Link klicken.",
+        "btn" : "E-Mail bestätigen"
     }
- }
+}

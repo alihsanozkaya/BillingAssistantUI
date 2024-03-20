@@ -4,12 +4,14 @@ import cookies from "js-cookie";
 import i18next from "i18next";
 import { Modal, Tabs } from "antd";
 import languages from "../languages/Languages";
+import { useTranslation } from "react-i18next";
 
 
 const { TabPane } = Tabs;
 const LanguageModal = ({ showLanguageModal, handleCloseLanguageModal }) => {
   const currentLanguageCode = cookies.get("i18next") || "en";
   const currentLanguage = languages.find((l) => l.code === currentLanguageCode);
+  const { t } = useTranslation();
 
   useEffect(() => {
 
@@ -26,7 +28,7 @@ const LanguageModal = ({ showLanguageModal, handleCloseLanguageModal }) => {
         width={1040}
       >
         <Tabs defaultActiveKey="1">
-          <TabPane tab="Dil Ve Bolge" key="1">
+          <TabPane tab={t("header.language.languageAndRegion")} key="1">
             <div
               style={{
                 maxHeight: 480,
@@ -35,7 +37,7 @@ const LanguageModal = ({ showLanguageModal, handleCloseLanguageModal }) => {
             >
               <div className="px-3 mt-2 mb-3">
                 <h6 style={{ fontSize: 21, color: "#484848" }}>
-                  Dil ve Bölge Seç
+                {t("header.language.languageAndRegion")}  {t("header.language.choose")}
                 </h6>
               </div>
 

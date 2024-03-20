@@ -7,13 +7,14 @@ import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { isUserLoggedIn } from "./redux/actions/AuthActions";
 import NotFoundPage from "./pages/NotFoundPage";
-import UploadPage from "./pages/UploadPage";
+import MyInvoicesPage from "./pages/MyInvoicesPage";
 import ProfilePage from "./pages/ProfilePage";
 import VertifyPage from "./pages/VertifyPage";
 import PrivateRoute from "./routes/PrivateRoute";
 import PropertiesPage from "./pages/PropertiesPage";
 import AboutPage from "./pages/AboutPage";
 import PricingPage from "./pages/PricingPage";
+import UploadPhoto from "./pages/UploadInvoicePage";
 
 function App() {
   const dispatch = useDispatch();
@@ -31,7 +32,8 @@ function App() {
         <Route path="/about" element={<AboutPage />} />
         <Route path="/register" element={<RegisterPage />} />
         <Route path="/login" element={<LoginPage />} />
-        <Route path="/upload" element={<PrivateRoute><UploadPage /></PrivateRoute> } />
+        <Route path="/my-invoices" element={<PrivateRoute><MyInvoicesPage /></PrivateRoute> } />
+        <Route path="/upload-invoice" element={<PrivateRoute><UploadPhoto /></PrivateRoute> } />
         <Route path="/pricing" element={<PricingPage />} />
         <Route path="/my-profile" element={<PrivateRoute><ProfilePage /></PrivateRoute>} />
         <Route path="/verified/:email" element={<VertifyPage />} />

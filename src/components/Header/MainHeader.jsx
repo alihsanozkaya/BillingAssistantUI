@@ -26,19 +26,19 @@ const MobileMenu = ({ onClose }) => {
         to="/about"
         className="block text-sm font-semibold leading-6 text-gray-900 py-2"
       >
-        Hakkımızda
+        {t("header.about")}
       </Link>
       <Link
         to="/properties"
         className="block text-sm font-semibold leading-6 text-gray-900 py-2"
       >
-        Özellikler
+        {t("header.properties")}
       </Link>
       <Link
         to="/pricing"
         className="block text-sm font-semibold leading-6 text-gray-900 py-2"
       >
-        Ücretlendirme
+        {t("header.pricing")}
       </Link>
       <div className="mt-4">
         {auth.entrance ? (
@@ -48,19 +48,19 @@ const MobileMenu = ({ onClose }) => {
               onClick={() => navigate("/my-profile", { replace: true })}
               className="block text-sm font-semibold leading-6 text-gray-900 py-2"
             >
-              Profilim
+            {t("header.myAccount")}
             </button>
             <button
               onClick={() => navigate("/upload", { replace: true })}
               className="block text-sm font-semibold leading-6 text-gray-900 py-2"
             >
-              Fatura Yükle
+            {t("header.myBills")}
             </button>
             <button
               onClick={LogoutHandler}
               className="block text-sm font-semibold leading-6 text-gray-900 py-2"
             >
-              Çıkış Yap
+            {t("header.logout")}
             </button>
           </>
         ) : (
@@ -70,13 +70,13 @@ const MobileMenu = ({ onClose }) => {
               to="/login"
               className="block text-sm font-semibold leading-6 text-gray-900 py-2"
             >
-              Giriş Yap
+            {t("global.login")}
             </Link>
             <Link
               to="/register"
               className="block text-sm font-semibold leading-6 text-gray-900 py-2"
             >
-              Kayıt Ol
+            {t("global.register")}
             </Link>
           </>
         )}
@@ -131,35 +131,34 @@ const MainHeader = () => {
             to="/about"
             className="text-sm font-semibold leading-7 p-2 rounded-lg hover:no-underline hover:bg-white"
           >
-            Hakkımızda
+            {t("header.about")}
           </Link>
           <Link
             to="/properties"
             className="text-sm font-semibold leading-7 p-2 rounded-lg hover:no-underline hover:bg-white"
           >
-            Özellikler
+            {t("header.properties")}
           </Link>
           <Link
             to="/pricing"
             className="text-sm font-semibold leading-7 p-2 rounded-lg hover:no-underline hover:bg-white"
           >
-            {/* {t('header.pay')} */}
-            Ücretlendirme
+            {t("header.pricing")}
           </Link>
         </Popover.Group>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
           {auth.entrance ? <LoggedInHeader /> : <NotLoggedInHeader />}
         </div>
-        {/* <div>
-          <i
-            class="fa-solid fa-globe me-3 ms-4 mt-1"
-            onClick={handleShowLanguageModal}
-          ></i>
+        <div
+          style={{ cursor: "pointer" }}
+          className="leading-7 p-2 rounded-lg hover:no-underline"
+        >
+          <i class="fa-solid fa-globe" onClick={handleShowLanguageModal}></i>
           <LanguageModal
             showLanguageModal={showLanguageModal}
             handleCloseLanguageModal={handleCloseLanguageModal}
           />
-        </div> */}
+        </div>
       </nav>
       <Dialog
         as="div"

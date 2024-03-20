@@ -44,18 +44,18 @@ const LoginPage = () => {
       <main className="w-full flex flex-col items-center justify-center px-4">
         <div className="max-w-sm w-full text-gray-600 space-y-8 mt-4 shadow-lg bg-gray-100">
           <div className="text-center">
-            <div className="mt-5 space-y-2">
+            <div className="mt-3 space-y-2">
               <>
                 <h3 className="text-gray-800 text-2xl font-bold sm:text-3xl">
-                  Giriş yap
+                {t('global.login')}
                 </h3>
                 <p className="">
-                {t('loginPage.description')}
+                {t('loginPage.description')} {" "}
                   <Link
                     to="/register"
                     className="font-medium text-indigo-600 hover:text-indigo-500"
                   >
-                    Üye ol{" "}
+                  {t('global.register')}
                   </Link>
                 </p>
               </>
@@ -63,7 +63,7 @@ const LoginPage = () => {
           </div>
           <form>
             <div className="px-4">
-              <label className="font-medium mt-3">Email</label>
+              <label className="font-medium mt-1">{t('global.email')}</label>
               <input
                 type="email"
                 required
@@ -74,7 +74,7 @@ const LoginPage = () => {
               />
             </div>
             <div className="px-4">
-              <label className="font-medium mt-3">Şifre</label>
+              <label className="font-medium mt-3">{t('global.password')}</label>
               <div className="relative">
                 <input
                   type={showPassword ? "text" : "password"}
@@ -98,7 +98,7 @@ const LoginPage = () => {
               className="w-full mt-4 px-4 py-2 text-white font-medium bg-indigo-600 hover:bg-indigo-500 active:bg-indigo-600 rounded-lg duration-150"
               onClick={userLogin}
             >
-              Giriş yap
+              {t('global.login')}
             </button>
           </form>
         </div>
