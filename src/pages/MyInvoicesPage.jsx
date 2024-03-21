@@ -5,7 +5,7 @@ import { useTranslation } from "react-i18next";
 import InvoiceCard from "../components/Card/InvoiceCard";
 import { Link } from "react-router-dom";
 
-const MyBillsPage = () => {
+const MyInvoicesPage = () => {
   const { t } = useTranslation();
   return (
     <MainLayout>
@@ -27,4 +27,4 @@ const MyBillsPage = () => {
   );
 };
 
-export default MyBillsPage;
+export default MyInvoicesPage;

@@ -41,16 +41,16 @@ const LanguageModal = ({ showLanguageModal, handleCloseLanguageModal }) => {
                 </h6>
               </div>
 
-              <div class="container">
-                <div class="d-flex justify-content-start row  gy-5">
+              <div className="container">
+                <div className="d-flex justify-content-start row  gy-5">
                   {languages.map(
                     ({ code, name, country_code, country_name }) => (
                       <div
-                        class="col col-lg-3 col-md-4 col-sm-12"
+                        className="col col-lg-3 col-md-4 col-sm-12"
                         key={country_code}
                       >
                         <button
-                          class=" w-100 btn btn-md btn-sm  btn-light rounded-pill p-3 my-2 "
+                          className=" w-100 btn btn-md btn-sm  btn-light rounded-pill p-3 my-2 "
                           onClick={() => {
                             i18next.changeLanguage(code);
                             handleCloseLanguageModal();
@@ -71,7 +71,7 @@ const LanguageModal = ({ showLanguageModal, handleCloseLanguageModal }) => {
                             <img
                               src={`https://flagicons.lipis.dev/flags/4x3/${country_code}.svg`}
                               alt=""
-                              class="img-fluid mx-2"
+                              className="img-fluid mx-2"
                               width={24}
                               height={24}
                             />

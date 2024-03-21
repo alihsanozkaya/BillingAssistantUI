@@ -17,7 +17,7 @@
         "logout" : "Çıkış yap",
         "myAccount" : "Hesabım",
         "myProfile" : "Profil",
-        "myBills" : "Faturalarım",
+        "myInvoices" : "Faturalarım",
         "language" : {
             "languageAndRegion" : "Dil ve Bölge",
             "choose" : "seç"
@@ -98,6 +98,6 @@
         "btn" : "Email Doğrula"
     },
     "uploadInvoicePage" : {
-        
+        "btn" : "Fatura ekle"
     }
 }

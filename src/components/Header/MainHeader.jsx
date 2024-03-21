@@ -9,84 +9,10 @@ import { NotLoggedInHeader } from "./NotLoggedInHeader";
 import logo from "../../images/bill-icon-logo-vector.jpg";
 import LanguageModal from "../Modal/LanguageModal";
 import { useTranslation } from "react-i18next";
-const MobileMenu = ({ onClose }) => {
-  const auth = useSelector((state) => state.auth);
-  const navigate = useNavigate();
-  const dispatch = useDispatch();
-
-  const LogoutHandler = () => {
-    dispatch(logout());
-    onClose();
-  };
-
-  const { t } = useTranslation();
-  return (
-    <div className="lg:hidden">
-      <Link
-        to="/about"
-        className="block text-sm font-semibold leading-6 text-gray-900 py-2"
-      >
-        {t("header.about")}
-      </Link>
-      <Link
-        to="/properties"
-        className="block text-sm font-semibold leading-6 text-gray-900 py-2"
-      >
-        {t("header.properties")}
-      </Link>
-      <Link
-        to="/pricing"
-        className="block text-sm font-semibold leading-6 text-gray-900 py-2"
-      >
-        {t("header.pricing")}
-      </Link>
-      <div className="mt-4">
-        {auth.entrance ? (
-          <>
-            <LoggedInHeader />
-            <button
-              onClick={() => navigate("/my-profile", { replace: true })}
-              className="block text-sm font-semibold leading-6 text-gray-900 py-2"
-            >
-            {t("header.myAccount")}
-            </button>
-            <button
-              onClick={() => navigate("/upload", { replace: true })}
-              className="block text-sm font-semibold leading-6 text-gray-900 py-2"
-            >
-            {t("header.myBills")}
-            </button>
-            <button
-              onClick={LogoutHandler}
-              className="block text-sm font-semibold leading-6 text-gray-900 py-2"
-            >
-            {t("header.logout")}
-            </button>
-          </>
-        ) : (
-          <>
-            <NotLoggedInHeader />
-            <Link
-              to="/login"
-              className="block text-sm font-semibold leading-6 text-gray-900 py-2"
-            >
-            {t("global.login")}
-            </Link>
-            <Link
-              to="/register"
-              className="block text-sm font-semibold leading-6 text-gray-900 py-2"
-            >
-            {t("global.register")}
-            </Link>
-          </>
-        )}
-      </div>
-    </div>
-  );
-};
+import MobileHeader from "./MobileHeader";
 
 const MainHeader = () => {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [mobileHeaderOpen, setMobileHeaderOpen] = useState(false);
   const auth = useSelector((state) => state.auth);
 
   const [showLanguageModal, setShowLanguageModal] = useState(false);
@@ -103,7 +29,7 @@ const MainHeader = () => {
     <header
       style={{
         background:
-          "linear-gradient(to right, rgba(249, 215, 28, 0.5), rgba(107, 45, 159, 0.5))",
+          "linear-gradient(to right, rgba(249, 215, 28, 0.4), rgba(107, 45, 159, 0.5))",
       }}
     >
       <nav
@@ -115,16 +41,6 @@ const MainHeader = () => {
             <span className="sr-only">Your Company</span>
             <img className="h-12 w-auto" src={logo} alt="" />
           </Link>
-        </div>
-        <div className="flex lg:hidden">
-          <button
-            type="button"
-            className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
-            onClick={() => setMobileMenuOpen(true)}
-          >
-            <span className="sr-only">Open main menu</span>
-            <Bars3Icon className="h-6 w-6" aria-hidden="true" />
-          </button>
         </div>
         <Popover.Group className="hidden lg:flex lg:gap-x-12">
           <Link
@@ -153,40 +69,45 @@ const MainHeader = () => {
           style={{ cursor: "pointer" }}
           className="leading-7 p-2 rounded-lg hover:no-underline"
         >
-          <i class="fa-solid fa-globe" onClick={handleShowLanguageModal}></i>
+          <i className="fa-solid fa-globe" onClick={handleShowLanguageModal}></i>
           <LanguageModal
             showLanguageModal={showLanguageModal}
             handleCloseLanguageModal={handleCloseLanguageModal}
           />
         </div>
+        <div className="flex lg:hidden">
+          <span
+            type="button"
+            className="inline-flex items-center justify-center rounded-md ps-3 text-gray-700"
+            onClick={() => setMobileHeaderOpen(true)}
+          >
+            <span className="sr-only">Open main menu</span>
+            <Bars3Icon className="h-6 w-6 me-4" aria-hidden="true" />
+          </span>
+        </div>
       </nav>
       <Dialog
         as="div"
         className="lg:hidden"
-        open={mobileMenuOpen}
-        onClose={() => setMobileMenuOpen(false)}
+        open={mobileHeaderOpen}
+        onClose={() => setMobileHeaderOpen(false)}
       >
-        <div className="fixed inset-0 z-10" />
-        <Dialog.Panel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
-          <div className="flex items-center justify-between">
-            <Link to="/" className="-m-1.5 p-1.5">
-              <span className="sr-only">Your Company</span>
-              <img
-                className="h-8 w-auto"
-                src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
-                alt=""
-              />
-            </Link>
-            <button
+        <div className="fixed inset-0 z-10"/>
+        <Dialog.Panel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10" style={{
+        background:
+          "linear-gradient(to right, rgb(249, 235, 163), rgb(183, 153, 205)",
+      }}>
+          <div className="justify-between">
+            <span
               type="button"
-              className="-m-2.5 rounded-md p-2.5 text-gray-700"
-              onClick={() => setMobileMenuOpen(false)}
+              className="rounded-lg text-gray-700"
+              onClick={() => setMobileHeaderOpen(false)}
             >
               <span className="sr-only">Close menu</span>
-              <XMarkIcon className="h-6 w-6" aria-hidden="true" />
-            </button>
+              <XMarkIcon className="h-6 w-6 mb-3" aria-hidden="true" />
+            </span>
           </div>
-          <MobileMenu onClose={() => setMobileMenuOpen(false)} />
+          <MobileHeader onClose={() => setMobileHeaderOpen(false)} />
         </Dialog.Panel>
       </Dialog>
     </header>

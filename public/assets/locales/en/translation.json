@@ -17,7 +17,7 @@
         "logout" : "Log out",
         "myAccount" : "My account",
         "myProfile" : "Profile",
-        "myBills" : "My bills",
+        "myInvoices" : "My bills",
         "language" : {
             "languageAndRegion" : "Language and Region",
             "choose" : "choose"
@@ -96,5 +96,8 @@
         "vertifyMessage" : "Verify your email address",
         "description" : "You can verify your registered email address by clicking on the link below.",
         "btn" : "Verify Email"
+    },
+    "uploadInvoicePage" : {
+        "btn" : "Add invoice"
     }
 }

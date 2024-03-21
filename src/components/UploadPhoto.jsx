@@ -11,12 +11,12 @@ import {
 } from "antd";
 import axios from "axios";
 import { CameraFilled } from "@ant-design/icons";
-
 import Resizer from "react-image-file-resizer";
 import ImgCrop from "antd-img-crop";
-import moment from "moment";
 import { useDispatch, useSelector } from "react-redux";
-import { AddOrder } from "../redux/actions/OrderActions";
+import { CreateOrder } from "../redux/actions/OrderActions";
+import { useTranslation } from "react-i18next";
+
 const UploadPhoto = () => {
   const [imageUrl, setImageUrl] = useState("");
   const [imageLength, setImageLength] = useState(0);
@@ -25,11 +25,11 @@ const UploadPhoto = () => {
   const [quantity, setQuantity] = useState(50);
 
   const auth = useSelector((state) => state.auth);
-
+  const { t } = useTranslation();
   const dispatch = useDispatch();
 
-  const handleAddOrder = () => {
-    dispatch(AddOrder({ userId, productId, quantity, imageUrl }));
+  const handleCreateOrder = () => {
+    dispatch(CreateOrder({ userId, productId, quantity, imageUrl }));
   };
 
   useEffect(() => {
@@ -137,8 +137,8 @@ const UploadPhoto = () => {
         </Upload>
       </ImgCrop>
 
-      <button className="btn btn-primary" onClick={handleAddOrder}>
-        Fatura ekle
+      <button className="btn btn-primary" onClick={handleCreateOrder}>
+        {t("uploadInvoicePage.btn")}
       </button>
     </div>
   );

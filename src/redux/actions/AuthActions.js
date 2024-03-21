@@ -19,7 +19,7 @@ import {
 } from "../constants/AuthConstants";
 import axios from "axios";
 // giriş yapma
-export const Login = (user) => async (dispatch) => {
+export const login = (user) => async (dispatch) => {
   try {
     dispatch({ type: LOGIN_REQUEST });
     const res = await axios.post(`https://localhost:7032/api/Auths/login`, {

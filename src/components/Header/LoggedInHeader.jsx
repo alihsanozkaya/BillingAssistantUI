@@ -2,7 +2,7 @@ import React, { Fragment } from "react";
 import { Popover, Transition } from "@headlessui/react";
 import {  ChevronDownIcon } from "@heroicons/react/20/solid";
 import { useDispatch, useSelector } from "react-redux";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { logout } from "../../redux/actions/AuthActions";
 import { useTranslation } from "react-i18next";
 
@@ -44,26 +44,26 @@ export const LoggedInHeader = () => {
               className="p-4"
               style={{
                 background:
-                  "linear-gradient(to right, rgba(249, 215, 28, 0.5), rgba(107, 45, 159, 0.5))",
+                  "linear-gradient(to right, rgba(249, 215, 28, 0.3), rgba(107, 45, 159, 0.4))",
               }}
             >
-              <div class="flex flex-1 justify-between items-center">
-                <button
+              <div className="flex flex-1 justify-between items-center">
+                <Link
+                  to="/my-profile"
                   className="text-sm font-semibold leading-7 p-2 mt-2 rounded-lg hover:no-underline hover:bg-white"
-                  onClick={() => navigate("/my-profile", { replace: true })}
                 >
                 {t("header.myProfile")}
-                </button>
+                </Link>
               </div>
-              <div class="flex flex-1 justify-between items-center">
-                <button
+              <div className="flex flex-1 justify-between items-center">
+                <Link
+                  to="/my-invoices"
                   className="text-sm font-semibold leading-7 p-2 mt-2 rounded-lg hover:no-underline hover:bg-white"
-                  onClick={() => navigate("/my-invoices", { replace: true })}
                 >
-                {t("header.myBills")}
-                </button>
+                {t("header.myInvoices")}
+                </Link>
               </div>
-              <div class="flex flex-1 justify-between items-center">
+              <div className="flex flex-1 justify-between items-center">
                 <button
                   onClick={LogoutHandler}
                   className="text-sm font-semibold leading-7 p-2 mt-2 rounded-lg hover:no-underline hover:bg-white"

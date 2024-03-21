@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import MainLayout from "../layouts/MainLayout";
 import { useDispatch, useSelector } from "react-redux";
-import { Login, getUserVerificationStatus } from "../redux/actions/AuthActions";
+import { login, getUserVerificationStatus } from "../redux/actions/AuthActions";
 import { Link, useNavigate } from "react-router-dom";
 import { message } from "antd";
 import { EyeOutlined, EyeInvisibleOutlined } from "@ant-design/icons";
@@ -25,7 +25,7 @@ const LoginPage = () => {
       verificationStatus.userVerificationStatus === true
     ) {
       // Eğer kullanıcı doğrulamışsa giriş yap
-      dispatch(Login({ email, password }));
+      dispatch(login({ email, password }));
     } else {
       // Kullanıcı doğrulanmamışsa, hata mesajı göster
       message.error("Hesabınız doğrulanmamış. Giriş yapılamaz.");

@@ -17,7 +17,7 @@
         "logout" : "Ausloggen",
         "myAccount" : "Mein Konto",
         "myProfile" : "Mein Profil",
-        "myBills" : "Meine Rechnungen",
+        "myInvoices" : "Meine Rechnungen",
         "language" : {
             "languageAndRegion" : "Sprache und Region",
             "choose" : "wählen"
@@ -96,5 +96,8 @@
         "vertifyMessage" : "Bestätige deine Email-Adresse",
         "description" : "Sie können Ihre registrierte E-Mail-Adresse überprüfen, indem Sie auf den untenstehenden Link klicken.",
         "btn" : "E-Mail bestätigen"
+    },
+    "uploadInvoicePage" : {
+        "btn" : "Rechnung hinzufügen"
     }
 }
