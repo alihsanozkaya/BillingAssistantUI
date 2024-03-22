@@ -1,14 +1,7 @@
-import { CheckIcon } from "@heroicons/react/20/solid";
+import { CheckIcon, XMarkIcon } from "@heroicons/react/20/solid";
 import MainLayout from "../layouts/MainLayout";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-
-const includedFeatures = [
-  "Private forum access",
-  "Member resources",
-  "Entry to annual conference",
-  "Official member t-shirt",
-];
 
 export default function PricingPage() {
   const { t } = useTranslation();
@@ -25,28 +18,45 @@ export default function PricingPage() {
               {t("pricingPage.type1")} {t("pricingPage.membership")}
               </h3>
               <p className="mt-6 text-base leading-7 text-gray-600">
-                Lorem ipsum dolor sit amet consect etur adipisicing elit. Itaque
-                amet indis perferendis blanditiis repellendus etur quidem
-                assumenda.
+                {t("standartFeatures.description")}
               </p>
               <div className="mt-10 flex items-center gap-x-4 ">
                 <h4 className="flex-none text-sm font-semibold leading-6 text-indigo-600">
-                  What’s included
+                  {t("pricingPage.included")}
                 </h4>
               </div>
               <ul
                 role="list"
                 className="mt-8 grid grid-cols-1 gap-4 text-sm leading-6 text-gray-600 sm:grid-cols-2 sm:gap-6"
               >
-                {includedFeatures.map((feature) => (
-                  <li key={feature} className="flex gap-x-3">
+                <li className="flex gap-x-3">
                     <CheckIcon
-                      className="h-6 w-5 flex-none text-indigo-600"
+                      className="h-6 w-5 flex-none text-success"
                       aria-hidden="true"
                     />
-                    {feature}
+                    {t("standartFeatures.feature1")}
                   </li>
-                ))}
+                  <li className="flex gap-x-3">
+                    <CheckIcon
+                      className="h-6 w-5 flex-none text-success"
+                      aria-hidden="true"
+                    />
+                    {t("standartFeatures.feature2")}
+                  </li>
+                  <li className="flex gap-x-3">
+                    <CheckIcon
+                      className="h-6 w-5 flex-none text-success"
+                      aria-hidden="true"
+                    />
+                    {t("standartFeatures.feature3")}
+                  </li>
+                  <li className="flex gap-x-3">
+                    <XMarkIcon
+                      className="h-6 w-5 flex-none text-danger"
+                      aria-hidden="true"
+                    />
+                    {t("standartFeatures.feature4")}
+                  </li>
               </ul>
             </div>
             <div className="-mt-2 lg:mt-0 lg:w-full lg:max-w-md shadow-lg flex flex-col items-center justify-center">
@@ -67,13 +77,11 @@ export default function PricingPage() {
               {t("pricingPage.type2")} {t("pricingPage.membership")}
               </h3>
               <p className="mt-6 text-base leading-7 text-gray-600">
-                Lorem ipsum dolor sit amet consect etur adipisicing elit. Itaque
-                amet indis perferendis blanditiis repellendus etur quidem
-                assumenda.
+                {t("premiumFeatures.description")}
               </p>
               <div className="mt-10 flex items-center gap-x-4">
                 <h4 className="flex-none text-sm font-semibold leading-6 text-indigo-600">
-                  What’s included
+                {t("pricingPage.included")}
                 </h4>
                 <div className="h-px flex-auto bg-gray-100" />
               </div>
@@ -81,15 +89,34 @@ export default function PricingPage() {
                 role="list"
                 className="mt-8 grid grid-cols-1 gap-4 text-sm leading-6 text-gray-600 sm:grid-cols-2 sm:gap-6"
               >
-                {includedFeatures.map((feature) => (
-                  <li key={feature} className="flex gap-x-3">
+                <li className="flex gap-x-3">
                     <CheckIcon
-                      className="h-6 w-5 flex-none text-indigo-600"
+                      className="h-6 w-5 flex-none text-success"
                       aria-hidden="true"
                     />
-                    {feature}
+                    {t("premiumFeatures.feature1")}
                   </li>
-                ))}
+                  <li className="flex gap-x-3">
+                    <CheckIcon
+                      className="h-6 w-5 flex-none text-success"
+                      aria-hidden="true"
+                    />
+                    {t("premiumFeatures.feature2")}
+                  </li>
+                  <li className="flex gap-x-3">
+                    <CheckIcon
+                      className="h-6 w-5 flex-none text-success"
+                      aria-hidden="true"
+                    />
+                    {t("premiumFeatures.feature3")}
+                  </li>
+                  <li className="flex gap-x-3">
+                    <CheckIcon
+                      className="h-6 w-5 flex-none text-success"
+                      aria-hidden="true"
+                    />
+                    {t("premiumFeatures.feature4")}
+                  </li>
               </ul>
             </div>
             <div className="-mt-2 p- lg:mt-0 lg:w-full lg:max-w-md lg:flex-shrink-0 shadow-lg">

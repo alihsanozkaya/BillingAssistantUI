@@ -15,6 +15,8 @@ import PropertiesPage from "./pages/PropertiesPage";
 import AboutPage from "./pages/AboutPage";
 import PricingPage from "./pages/PricingPage";
 import UploadPhoto from "./pages/UploadInvoicePage";
+import ConditionsPage from "./pages/ConditionsPage";
+import PrivacyPage from "./pages/PrivacyPage";
 
 function App() {
   const dispatch = useDispatch();
@@ -38,6 +40,8 @@ function App() {
         <Route path="/my-profile" element={<PrivateRoute><ProfilePage /></PrivateRoute>} />
         <Route path="/verified/:email" element={<VertifyPage />} />
         <Route path="/properties" element={<PropertiesPage />} />
+        <Route path="/conditions" element={<ConditionsPage />} />
+        <Route path="/privacy" element={<PrivacyPage />} />
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
     </Router>

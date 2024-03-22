@@ -26,7 +26,7 @@
     "footer" : {
         "conditions" : "Şartlar",
         "licence" : "Lisans",
-        "security" : "Gizlilik",
+        "privacy" : "Gizlilik",
         "aboutUs" : "Hakkımızda",
         "mobileApplication" : "Mobil Uygulamamız"
     },
@@ -57,7 +57,8 @@
         "free" : "Ücretsiz",
         "btn" : "Erişim sahibi ol",
         "description1" : "Bir kez ödeyin, sonsuza kadar sahip olun",
-        "description2" : "Kolay şirket geri ödemesi için faturalar ve makbuzlar mevcuttur"
+        "description2" : "Kolay şirket geri ödemesi için faturalar ve makbuzlar mevcuttur",
+        "included" : "Neler dahil?"
     },
     "loginPage" : {
         "description" : "Bir hesabınız yoksa"
@@ -99,5 +100,55 @@
     },
     "uploadInvoicePage" : {
         "btn" : "Fatura ekle"
+    },
+    "conditionsPage" : {
+        "header" : "Şartlar",
+        "condition1" : "Kabul Edilme Koşulu",
+        "condition2" : "Hizmet Tanımı",
+        "condition3" : "Kullanıcı Sorumluluğu",
+        "condition4" : "Üyelik",
+        "condition5" : "Gizlilik Politikası",
+        "condition6" : "Telif Hakkı",
+        "condition7" : "İptal ve Geri Ödeme Politikası",
+        "condition8" : "Değişiklikler",
+        "condition9" : "İletişim",
+        "description1" : "Fatura Asistanı web sitesini kullanarak, bu Kullanım Şartları'nı kabul etmiş sayılırsınız. Eğer bu şartlara uymayı kabul etmiyorsanız, lütfen bu hizmeti kullanmayınız.",
+        "description2" : "Fatura Asistanı, kullanıcılara faturalarını izleme ve analiz yapma gibi hizmetler sunar. Bu hizmet, kullanıcıların kişisel finans yönetimini kolaylaştırmayı amaçlar.",
+        "description3" : "Kullanıcılar, Fatura Asistanı web sitesini yasalara uygun şekilde kullanmakla sorumludur. Kullanıcılar, kendi hesaplarının güvenliğinden ve bilgilerinin gizliliğinden sorumludur.",
+        "description4" : "Fatura Asistanı web sitesinde standart ve premium üyelik seçenekleri bulunmaktadır. Premium üyelik, ek özellikler ve avantajlar sunar, ancak ücret karşılığında sunulur.",
+        "description5" : "Fatura Asistanı'nın gizlilik politikasını dikkatlice okumanızı tavsiye ederiz. Kişisel bilgilerinizi nasıl işlediğimiz ve koruduğumuz hakkında detaylı bilgi sağlar.",
+        "description6" : "Fatura Asistanı web sitesinde bulunan içerikler (metinler, görseller, grafikler vb.) telif hakkı ile korunmaktadır. Bu içeriklerin izinsiz kullanımı yasaktır.",
+        "description7" : "Üyelik iptal ve geri ödeme politikası, kullanıcıların tercih ettiği üyelik türüne göre değişebilir. Lütfen üyelik iptal ve geri ödeme koşullarını dikkatlice inceleyiniz.",
+        "description8" : "Fatura Asistanı, bu Kullanım Şartları'nı dilediği zaman güncelleme veya değiştirme hakkını saklı tutar. Bu nedenle, kullanıcıların periyodik olarak bu şartları kontrol etmeleri önerilir.",
+        "description9" : "Herhangi bir sorunuz veya endişeniz varsa, lütfen bizimle iletişime geçmekten çekinmeyiniz. İletişim bilgilerimizi web sitemizde bulabilirsiniz."
+    },
+    "privacyPage" : {
+        "mainHeader" : "Gizlilik",
+        "header1" : "Gizlilik Politikası",
+        "header2" : "Kişisel Bilgilerin Toplanması ve Kullanılması",
+        "header3" : "Çerezler ve Teknoloji Kullanımı",
+        "header4" : "Kişisel Bilgilerin Korunması",
+        "header5" : "Üçüncü Taraf Bağlantıları ve Hizmetleri",
+        "header6" : "Gizlilik Politikası Değişiklikleri",
+        "description1" : "Bu gizlilik politikası, Fatura Asistanı tarafından işletilen web sitesi üzerinden sağlanan hizmetlerle ilgili kullanıcı gizliliğini korumayı amaçlamaktadır. Bu politika, web sitesini kullanan kullanıcıların kişisel bilgilerin nasıl toplandığını, kullanıldığını, korunduğunu ve ifşa edildiğini açıklamaktadır.",
+        "description2" : "Fatura Asistanı, web sitesini ziyaret ettiğinizde, bazı kişisel bilgiler otomatik olarak toplanabilir. Bu bilgiler şunları içerebilir: İsim, e-posta adresi, telefon numarası, adres gibi kullanıcı bilgileri. Bu bilgiler, kullanıcı deneyimini iyileştirmek, müşteri hizmetlerini sağlamak, talepleri işlemek ve hizmet sunmak için kullanılabilir.",
+        "description3" : "Fatura Asistanı, kullanıcı deneyimini geliştirmek ve web sitesini iyileştirmek için çerezleri ve benzer teknolojileri kullanabilir. Bu teknolojiler, site trafiğini izlemek, kullanıcı tercihlerini hatırlamak, içerik ve reklamları kişiselleştirmek ve güvenlik önlemlerini uygulamak için kullanılabilir.",
+        "description4" : "Fatura Asistanı, kişisel bilgilerinizi korumak için endüstri standartlarına uygun güvenlik önlemleri alır. Ancak, internet üzerinden bilgi iletiminin veya depolamanın tam güvenliği garanti edilemez.",
+        "description5" : "Fatura Asistanı, üçüncü taraf web sitelerine veya hizmetlerine bağlantılar içerebilir. Bu bağlantıları kullanırken dikkatli olmanızı ve bu üçüncü taraf sitelerin gizlilik politikalarını incelemenizi öneririz. Fatura Asistanı, üçüncü taraf sitelerin içeriği veya gizlilik uygulamaları hakkında sorumluluk kabul etmez.",
+        "description6" : "Bu gizlilik politikası, değişiklik yapma hakkını saklı tutar. Politikadaki herhangi bir değişiklik, bu sayfada yayınlandıktan sonra yürürlüğe girer."
+    },
+    "standartFeatures" : {
+        "feature1": "Basit müşteri desteği",
+        "feature2": "Fatura görüntüleme ve düzenleme",
+        "feature3": "50 fatura yükleme",
+        "feature4": "Sınırsız fatura yükleme",
+        "description" : "Kullanıcılar, harcadıkları paranın kategorilere göre basit analizlerini yapabilirler."
+    },
+    "premiumFeatures" : {
+        "feature1": "Gelişmiş müşteri desteği",
+        "feature2": "Fatura görüntüleme ve düzenleme",
+        "feature3": "Gelişmiş fatura takibi",
+        "feature4": "Sınırsız fatura yükleme",
+        "description" : "Kullanıcılar, harcadıkları paranın kategorilere göre detaylı analizlerini yapabilirler.        "
     }
 }

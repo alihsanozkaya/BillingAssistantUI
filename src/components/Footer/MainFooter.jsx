@@ -1,25 +1,18 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 
 const MainFooter = () => {
   const { t } = useTranslation();
 
   const footerNavs = [
     {
-      href: "/",
+      href: "/conditions",
       name: t("footer.conditions"),
     },
     {
-      href: "/",
-      name: t("footer.licence"),
-    },
-    {
-      href: "/",
-      name: t("footer.security"),
-    },
-    {
-      href: "/",
-      name: t("footer.aboutUs"),
+      href: "/privacy",
+      name: t("footer.privacy"),
     },
   ];
 
@@ -30,10 +23,10 @@ const MainFooter = () => {
           <div className="space-y-6">
             <ul className="flex flex-wrap items-center gap-4 text-sm sm:text-base">
               {footerNavs.map((item, idx) => (
-                <li className="text-gray-800 hover:text-gray-500 duration-150">
-                  <a key={idx} href={item.href}>
+                <li className="text-gray-800 hover:text-gray-500 duration-150 ">
+                  <Link key={idx} to={item.href} className="hover:no-underline">
                     {item.name}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>

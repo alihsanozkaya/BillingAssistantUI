@@ -26,7 +26,7 @@
     "footer" : {
         "conditions" : "Bedingungen",
         "licence" : "Lizenz",
-        "security" : "Sicherheit",
+        "privacy" : "Privatsphäre",
         "aboutUs" : "Über uns",
         "mobileApplication" : "Mobile Applikation"
     },
@@ -57,7 +57,8 @@
         "free" : "Frei",
         "btn" : "Zugang erhalten",
         "description1" : "Einmal zahlen, für immer besitzen",
-        "description2" : "Rechnungen und Quittungen stehen für eine einfache Rückerstattung durch das Unternehmen zur Verfügung"
+        "description2" : "Rechnungen und Quittungen stehen für eine einfache Rückerstattung durch das Unternehmen zur Verfügung",
+        "included" : "Was ist inbegriffen?"
     },
     "loginPage" : {
         "description" : "Wenn Sie kein Konto haben"
@@ -99,5 +100,55 @@
     },
     "uploadInvoicePage" : {
         "btn" : "Rechnung hinzufügen"
+    },
+    "conditionsPage" : {
+        "header" : "Bedingungen",
+        "condition1" : "Annahmebedingung",
+        "condition2" : "Leistungsbeschreibung",
+        "condition3" : "Verantwortung des Benutzers",
+        "condition4" : "Mitgliedschaft",
+        "condition5" : "Datenschutzrichtlinie",
+        "condition6" : "Urheberrechte",
+        "condition7" : "Stornierungs- und Rückerstattungsbedingungen",
+        "condition8" : "Änderungen",
+        "condition9" : "Kommunikation",
+        "description1" : "Durch die Nutzung der Der Rechnungsassistent-Website stimmen Sie diesen Nutzungsbedingungen zu. Wenn Sie diesen Bedingungen nicht zustimmen, nutzen Sie diesen Service bitte nicht.",
+        "description2" : "Der Rechnungsassistent bietet Benutzern Dienste wie die Verfolgung und Analyse ihrer Rechnungen. Ziel dieses Dienstes ist es, den Nutzern die Verwaltung ihrer persönlichen Finanzen zu erleichtern.",
+        "description3" : "Benutzer sind dafür verantwortlich, die Der Rechnungsassistent-Website in Übereinstimmung mit dem Gesetz zu nutzen. Benutzer sind für die Sicherheit ihrer eigenen Konten und die Vertraulichkeit ihrer Informationen verantwortlich.",
+        "description4" : "Auf der Der Rechnungsassistent-Website gibt es Standard- und Premium-Mitgliedschaftsoptionen. Die Premium-Mitgliedschaft bietet zusätzliche Funktionen und Vorteile, ist jedoch mit Kosten verbunden.",
+        "description5" : "Wir empfehlen Ihnen, die Datenschutzrichtlinie von Der Rechnungsassistent sorgfältig zu lesen. Es enthält detaillierte Informationen darüber, wie wir Ihre personenbezogenen Daten verarbeiten und schützen.",
+        "description6" : "Die Inhalte (Texte, Bilder, Grafiken etc.) auf der Der Rechnungsassistent-Website sind urheberrechtlich geschützt. Die unbefugte Nutzung dieser Inhalte ist untersagt.",
+        "description7" : "Die Kündigungs- und Rückerstattungsbedingungen für die Mitgliedschaft können je nach der vom Benutzer bevorzugten Mitgliedschaftsart variieren. Bitte lesen Sie die Kündigungs- und Rückerstattungsbedingungen für die Mitgliedschaft sorgfältig durch.",
+        "description8" : "Der Rechnungsassistent behält sich das Recht vor, diese Nutzungsbedingungen jederzeit zu aktualisieren oder zu ändern. Daher wird Benutzern empfohlen, diese Bedingungen regelmäßig zu überprüfen.",
+        "description9" : "Wenn Sie Fragen oder Bedenken haben, zögern Sie bitte nicht, uns zu kontaktieren. Unsere Kontaktdaten finden Sie auf unserer Website."
+    },
+    "privacyPage" : {
+        "mainHeader" : "Privatsphäre",
+        "header1" : "Datenschutzrichtlinie",
+        "header2" : "Erhebung und Nutzung personenbezogener Daten",
+        "header3" : "Verwendung von Cookies und Technologie",
+        "header4" : "Schutz personenbezogener Daten",
+        "header5" : "Links und Dienste Dritter",
+        "header6" : "Änderungen der Datenschutzrichtlinie",
+        "description1" : "Ziel dieser Datenschutzrichtlinie ist es, die Privatsphäre der Nutzer hinsichtlich der Dienste zu schützen, die über die von Der Rechnungsassistent betriebene Website bereitgestellt werden. In dieser Richtlinie wird erläutert, wie die persönlichen Daten der Benutzer der Website erfasst, verwendet, geschützt und offengelegt werden.",
+        "description2" : "Der Rechnungsassistent erfasst möglicherweise automatisch einige personenbezogene Daten, wenn Sie die Website besuchen. Zu diesen Informationen können gehören: Benutzerinformationen wie Name, E-Mail-Adresse, Telefonnummer, Adresse. Diese Informationen können verwendet werden, um die Benutzererfahrung zu verbessern, Kundenservice bereitzustellen, Anfragen zu bearbeiten und Dienste bereitzustellen.",
+        "description3" : "Der Rechnungsassistent verwendet möglicherweise Cookies und ähnliche Technologien, um das Benutzererlebnis zu verbessern und die Website zu verbessern. Diese Technologien können verwendet werden, um den Website-Verkehr zu überwachen, Benutzerpräferenzen zu speichern, Inhalte und Anzeigen zu personalisieren und Sicherheitsmaßnahmen durchzusetzen.",
+        "description4" : "Der Rechnungsassistent verwendet branchenübliche Sicherheitsmaßnahmen, um Ihre persönlichen Daten zu schützen. Eine vollständige Sicherheit der Übertragung oder Speicherung von Informationen im Internet kann jedoch nicht gewährleistet werden.",
+        "description5" : "Der Rechnungsassistent kann Links zu Websites oder Diensten Dritter enthalten. Wir empfehlen Ihnen, bei der Verwendung dieser Links vorsichtig zu sein und die Datenschutzrichtlinien dieser Websites Dritter zu lesen. Der Rechnungsassistent übernimmt keine Verantwortung für den Inhalt oder die Datenschutzpraktiken von Websites Dritter.",
+        "description6" : "Diese Datenschutzerklärung behält sich das Recht vor, Änderungen vorzunehmen. Alle Änderungen der Richtlinie werden mit der Veröffentlichung auf dieser Seite wirksam."
+    },
+    "standartFeatures" : {
+        "feature1": "Einfacher Kundensupport",
+        "feature2": "Rechnungen einsehen und bearbeiten",
+        "feature3": "Laden Sie 50 Rechnungen hoch",
+        "feature4": "Unbegrenzter Rechnungs-Upload",
+        "description" : "Benutzer können eine einfache Analyse des von ihnen ausgegebenen Geldes nach Kategorie durchführen."
+    },
+    "premiumFeatures" : {
+        "feature1": "Erweiterter Kundensupport",
+        "feature2": "Rechnungen einsehen und bearbeiten",
+        "feature3": "Erweiterte Rechnungsverfolgung",
+        "feature4": "Unbegrenzter Rechnungs-Upload",
+        "description" : "Benutzer können ihre Ausgaben nach Kategorien detailliert analysieren."
     }
 }

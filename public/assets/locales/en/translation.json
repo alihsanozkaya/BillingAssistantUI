@@ -26,7 +26,7 @@
     "footer" : {
         "conditions" : "Conditions",
         "licence" : "Licence",
-        "security" : "Security",
+        "privacy" : "Privacy",
         "aboutUs" : "About Us",
         "mobileApplication" : "Our Mobile Application"
     },
@@ -57,7 +57,8 @@
         "free" : "Free",
         "btn" : "Get access",
         "description1" : "Pay once, own forever",
-        "description2" : "Invoices and receipts available for easy company reimbursement"
+        "description2" : "Invoices and receipts available for easy company reimbursement",
+        "included" : "What's included?"
     },
     "loginPage" : {
         "description" : "If you don't have an account"
@@ -99,5 +100,55 @@
     },
     "uploadInvoicePage" : {
         "btn" : "Add invoice"
+    },
+    "conditionsPage" : {
+        "header" : "Conditions",
+        "condition1" : "Condition of Acceptance",
+        "condition2" : "Service Description",
+        "condition3" : "User Responsibility",
+        "condition4" : "Membership",
+        "condition5" : "Privacy Policy",
+        "condition6" : "Copyright",
+        "condition7" : "Cancellation and Refund Policy",
+        "condition8" : "Changes",
+        "condition9" : "Communication",
+        "description1" : "By using the Billing Assistant website, you agree to these Terms of Use. If you do not agree to abide by these terms, please do not use this service.",
+        "description2" : "Billing Assistant offers users services such as tracking and analyzing their bills. This service aims to facilitate users' personal finance management.",
+        "description3" : "Users are responsible for using the Billing Assistant website in accordance with the law. Users are responsible for the security of their own accounts and the confidentiality of their information.",
+        "description4" : "There are standard and premium membership options on the Billing Assistant website. Premium membership offers additional features and benefits, but comes at a cost.",
+        "description5" : "We recommend that you carefully read Billing Assistant's privacy policy. It provides detailed information about how we process and protect your personal information.",
+        "description6" : "The contents (texts, images, graphics, etc.) on the Invoice Assistant website are protected by copyright. Unauthorized use of these contents is prohibited.",
+        "description7" : "Membership cancellation and refund policy may vary depending on the membership type preferred by users. Please review the membership cancellation and refund conditions carefully.",
+        "description8" : "Billing Assistant reserves the right to update or change these Terms of Use at any time. Therefore, users are advised to check these terms periodically.",
+        "description9" : "If you have any questions or concerns, please do not hesitate to contact us. You can find our contact information on our website."
+    },
+    "privacyPage" : {
+        "mainHeader" : "Privacy",
+        "header1" : "Privacy Policy",
+        "header2" : "Collection and Use of Personal Information",
+        "header3" : "Cookies and Technology Use",
+        "header4" : "Protection of Personal Information",
+        "header5" : "Third Party Links and Services",
+        "header6" : "Privacy Policy Changes",
+        "description1" : "This privacy policy aims to protect user privacy regarding the services provided through the website operated by Billing Assistant. This policy explains how the personal information of users of the website is collected, used, protected and disclosed.",
+        "description2" : "Billing Assistant may automatically collect some personal information when you visit the website. This information may include: User information such as name, email address, phone number, address. This information may be used to improve user experience, provide customer service, process requests and deliver services.",
+        "description3" : "Billing Assistant may use cookies and similar technologies to enhance user experience and improve the website. These technologies may be used to monitor site traffic, remember user preferences, personalize content and ads, and enforce security measures.",
+        "description4" : "Billing Assistant uses industry-standard security measures to protect your personal information. However, complete security of transmission or storage of information over the Internet cannot be guaranteed.",
+        "description5" : "Billing Assistant may contain links to third-party websites or services. We recommend that you be careful when using these links and review the privacy policies of these third-party sites. Billing Assistant assumes no responsibility for the content or privacy practices of third-party sites.",
+        "description6" : "This privacy policy reserves the right to change. Any changes to the policy will become effective upon posting on this page."
+    },
+    "standartFeatures" : {
+        "feature1": "Simple Customer Support",
+        "feature2": "View and edit invoices",
+        "feature3": "Upload 50 invoices",
+        "feature4": "Unlimited invoice upload",
+        "description" : "Users can perform simple analysis of the money they spend by category."
+    },
+    "premiumFeatures" : {
+        "feature1": "Advanced customer support",
+        "feature2": "View and edit invoices",
+        "feature3": "Advanced invoice tracking",
+        "feature4": "Unlimited invoice upload",
+        "description" : "Users can make detailed analysis of the money they spend according to categories."
     }
 }
