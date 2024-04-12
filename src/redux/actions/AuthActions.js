@@ -15,7 +15,13 @@ import {
   SENDEMAIL_FAIL,
   VERIFICATIONSTATUS_REQUEST,
   VERIFICATIONSTATUS_SUCCESS,
-  VERIFICATIONSTATUS_FAIL
+  VERIFICATIONSTATUS_FAIL,
+  UPDATEPROFILE_REQUEST,
+  UPDATEPROFILE_SUCCESS,
+  UPDATEPROFILE_FAIL,
+  GET_USER_PROFILE_REQUEST,
+  GET_USER_PROFILE_SUCCESS,
+  GET_USER_PROFILE_FAIL
 } from "../constants/AuthConstants";
 import axios from "axios";
 // giriş yapma
@@ -74,6 +80,38 @@ export const register = (user) => async (dispatch) => {
     });
   }
 };
+
+export const updateProfile = (user) => async (dispatch) => {
+  try {
+    dispatch({ type: UPDATEPROFILE_REQUEST });
+
+    const res = await axios.put(
+      "https://localhost:7032/api/Auths/updateProfile",
+      user
+    );
+
+    // Success
+    if (res.status >= 200 && res.status <= 205) {
+      const { id, firstName, lastName, email } = res.data;
+
+      dispatch({
+        type: UPDATEPROFILE_SUCCESS,
+        payload: {
+          id,
+          firstName,
+          lastName,
+          email,
+        },
+      });
+    }
+  } catch (error) {
+    dispatch({
+      type: UPDATEPROFILE_FAIL,
+      payload: error.response.data,
+    });
+  }
+};
+
 
 export const getUserVerificationStatus = (email) => async (dispatch) => {
   try {
@@ -187,6 +225,30 @@ export const verification = (user) => async (dispatch) => {
     dispatch({
       type: VERIFICATION_FAIL,
       payload: error.response.data,
+    });
+  }
+};
+
+
+export const getProfile = (userId) => async (dispatch) => {
+  try {
+    dispatch({
+      type: GET_USER_PROFILE_REQUEST,
+    });
+
+    const { data } = await axios.get(
+      `https://localhost:7032/api/Auths/getUserProfile?id=${userId}`
+    );
+    dispatch({
+      type: GET_USER_PROFILE_SUCCESS,
+      payload: {
+        data,
+      },
+    });
+  } catch (error) {
+    dispatch({
+      type: GET_USER_PROFILE_FAIL,
+      error: error.response,
     });
   }
 };

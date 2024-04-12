@@ -1,50 +1,61 @@
 import React, { useEffect, useState } from "react";
 import MainLayout from "../layouts/MainLayout";
 import { useDispatch, useSelector } from "react-redux";
-import { useNavigate } from "react-router-dom";
-import { register as _register, sendEmail } from "../redux/actions/AuthActions";
-import {
-  EyeOutlined,
-  EyeInvisibleOutlined,
-  EditFilled,
-} from "@ant-design/icons";
+import { updateProfile as _updateProfile, getProfile, isUserLoggedIn, } from "../redux/actions/AuthActions";
+import {  EditFilled } from "@ant-design/icons";
 import { useTranslation } from "react-i18next";
 
 const ProfilePage = () => {
+
+  const getUserProfile = useSelector((state) => state.getUserProfile)
   const [firstname, setFirstname] = useState("");
   const [lastname, setLastname] = useState("");
   const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [confirmPassword, setConfirmPassword] = useState("");
-  const [showPassword, setShowPassword] = useState(false);
-  const [showConfirmPassword, setShowConfirmPassword] = useState(false);
+
+  const [id, setId] = useState(0);
+ 
   const [disabled, setDisabled] = useState(true);
 
-  const navigate = useNavigate();
   const { t } = useTranslation();
-
   const dispatch = useDispatch();
   const auth = useSelector((state) => state.auth);
 
-  const userSignUp = (e) => {
-    e.preventDefault();
-    const user = { firstname, lastname, email, password, confirmPassword };
-    dispatch(_register(user));
-  };
-
-  const [userEmail, setUserEmail] = useState("");
+   
+    
+     useEffect(() => {
+     
+      if (id != 0 ) {
+        dispatch(getProfile(id))
+      }
+   
+     }, [id,auth.update])
+  
+  
   useEffect(() => {
-    setUserEmail(auth.user.email);
-  }, [auth.user.email]);
-
-  useEffect(() => {
-    if (auth && auth.authenticate) {
-      dispatch(sendEmail(email));
-    }
-  }, [auth, auth.authenticate, navigate, auth.user.email]);
-
+    setId(auth.user.id);
+  }, [auth.user.id]);
+  
   const toggleDisabled = () => {
     setDisabled(!disabled);
+  };
+  console.log("userId: " +id);
+
+  useEffect(() => {
+    if (auth.update) {
+      setDisabled(true)
+    }
+  }, [auth.update])
+  useEffect(() => {
+    setFirstname(getUserProfile.user?.data?.firstName)
+    setLastname(getUserProfile.user?.data?.lastName)
+    setEmail(getUserProfile.user?.data?.email)
+  }, [getUserProfile])
+  
+  const updateProfile = (e) => {
+    e.preventDefault();
+    dispatch(_updateProfile({ id, firstname, lastname, email }));
+   
+  
   };
 
   return (
@@ -73,7 +84,7 @@ const ProfilePage = () => {
                 type="name"
                 required
                 className="w-full h-full px-3 py-2 text-gray-500 outline-none border focus:border-indigo-600 shadow-sm rounded-lg"
-                value={disabled ? auth.user.firstName : firstname}
+                value={disabled ? getUserProfile.user?.data?.firstName : firstname}
                 onChange={(e) => setFirstname(e.target.value)}
                 placeholder={t("profilePage.placeholder1")}
                 disabled={disabled}
@@ -86,80 +97,29 @@ const ProfilePage = () => {
                 type="name"
                 required
                 className="w-full h-full px-3 py-2 text-gray-500 outline-none border focus:border-indigo-600 shadow-sm rounded-lg"
-                value={disabled ? auth.user.lastName : lastname}
+                value={disabled ? getUserProfile.user?.data?.lastName : lastname}
                 onChange={(e) => setLastname(e.target.value)}
                 placeholder={t("profilePage.placeholder2")}
                 disabled={disabled}
                 style={{ backgroundColor: disabled ? "transparent" : "white" }}
               />
             </div>
-            <div className="px-4">
+            <div className="px-4 mb-4">
               <label className="font-medium mt-3">{t("global.email")}</label>
               <input
                 type="email"
                 required
                 className="w-full h-full px-3 py-2 text-gray-500 outline-none border focus:border-indigo-600 shadow-sm rounded-lg"
-                value={disabled ? auth.user.email : email}
+                value={disabled ? getUserProfile.user?.data?.email : email}
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="example@example.com"
                 disabled={disabled}
                 style={{ backgroundColor: disabled ? "transparent" : "white" }}
               />
             </div>
-            <div className="px-4">
-              <label className="font-medium mt-3">{t("global.password")}</label>
-              <div className="relative">
-                <input
-                  type={showPassword ? "text" : "password"}
-                  required
-                  className="w-full h-full px-3 py-2 text-gray-500 outline-none border focus:border-indigo-600 shadow-sm rounded-lg"
-                  value={password}
-                  onChange={(e) => setPassword(e.target.value)}
-                  disabled={disabled}
-                  style={{
-                    backgroundColor: disabled ? "transparent" : "white",
-                  }}
-                />
-                <button
-                  className="absolute top-1/2 right-4 transform -translate-y-1/2"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    setShowPassword(!showPassword);
-                  }}
-                >
-                  {showPassword ? <EyeOutlined /> : <EyeInvisibleOutlined />}
-                </button>
-              </div>
-            </div>
-            <div className="px-4">
-              <label className="font-medium mt-3">{t("registerPage.confirmPassword")}</label>
-              <div className="relative mb-4">
-                <input
-                  type={showConfirmPassword ? "text" : "password"}
-                  required
-                  className="w-full h-full px-3 py-2 text-gray-500 outline-none border focus:border-indigo-600 shadow-sm rounded-lg"
-                  value={confirmPassword}
-                  onChange={(e) => setConfirmPassword(e.target.value)}
-                  disabled={disabled}
-                />
-                <button
-                  className="absolute top-1/2 right-4 transform -translate-y-1/2"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    setShowConfirmPassword(!showConfirmPassword);
-                  }}
-                >
-                  {showConfirmPassword ? (
-                    <EyeOutlined />
-                  ) : (
-                    <EyeInvisibleOutlined />
-                  )}
-                </button>
-              </div>
-            </div>
             <button
               className="w-full mt-1 px-4 py-2 text-white font-medium bg-indigo-600 hover:bg-indigo-500 active:bg-indigo-600 rounded-lg duration-150"
-              onClick={userSignUp}
+              onClick={updateProfile}
               hidden={disabled ? "hidden" : ""}
             >
               {t("global.update")}

@@ -17,13 +17,18 @@ import { useDispatch, useSelector } from "react-redux";
 import { CreateOrder } from "../redux/actions/OrderActions";
 import { useTranslation } from "react-i18next";
 
+import { Navigate, useNavigate } from "react-router-dom";
+import { CREATE_ORDER_RESET } from "../redux/constants/OrderConstants";
+
 const UploadPhoto = () => {
+
+  const navigate = useNavigate()
   const [imageUrl, setImageUrl] = useState("");
   const [imageLength, setImageLength] = useState(0);
   const [productId, setProductId] = useState(1);
   const [userId, setUserId] = useState(0);
   const [quantity, setQuantity] = useState(50);
-
+  const order = useSelector((state) => state.order)
   const auth = useSelector((state) => state.auth);
   const { t } = useTranslation();
   const dispatch = useDispatch();
@@ -31,7 +36,13 @@ const UploadPhoto = () => {
   const handleCreateOrder = () => {
     dispatch(CreateOrder({ userId, productId, quantity, imageUrl }));
   };
-
+  useEffect(() => {
+    if (order.isAdded) {
+      dispatch({type : CREATE_ORDER_RESET})
+      navigate('/my-invoices',{replace : true})
+    }
+  }, [order.isAdded])
+  
   useEffect(() => {
     setUserId(auth.user.id);
   }, [auth, auth.user.id]);

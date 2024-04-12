@@ -17,13 +17,22 @@ import {
   VERIFICATION_SUCCESS,
   VERIFICATIONSTATUS_REQUEST,
   VERIFICATIONSTATUS_FAIL,
-  VERIFICATIONSTATUS_SUCCESS
+  VERIFICATIONSTATUS_SUCCESS,
+  UPDATEPROFILE_REQUEST,
+  UPDATEPROFILE_SUCCESS,
+  UPDATEPROFILE_FAIL,
+  GET_USER_PROFILE_REQUEST,
+  GET_USER_PROFILE_SUCCESS,
+  GET_USER_PROFILE_FAIL,
+  UPDATEPROFILE_RESET
 } from "../constants/AuthConstants";
 
 const initialState = {
   token: null,
   user: {
-    name: "",
+    id: 0,
+    firstName: "",
+    lastName: "",
     email: "",
   },
   authenticate: false,
@@ -32,6 +41,7 @@ const initialState = {
   userVerificationStatus: null,
   error: null,
   message: "",
+  update: false
 };
 
 export const authReducer = (state = initialState, action) => {
@@ -101,11 +111,72 @@ export const authReducer = (state = initialState, action) => {
         authenticate: false,
         error: action.payload,
       };
-
+      case UPDATEPROFILE_REQUEST:
+      return {
+        ...state,
+        update: false,
+        loading: true
+      };
+    case UPDATEPROFILE_SUCCESS:
+      return {
+        ...state,
+        update: true,
+        loading: false,
+        payload: action.payload
+      };
+    case UPDATEPROFILE_FAIL:
+      return {
+        ...state,
+        update: false,
+        loading: false,
+        error: action.payload
+      };
+      case UPDATEPROFILE_RESET:
+        return {
+          ...state,
+          update: false,
+          
+        };
+    
     default:
       return state;
   }
 };
+
+export const getUserProfileReducer = (
+  state = { user : {} },
+  action
+) => {
+  switch (action.type) {
+    case GET_USER_PROFILE_REQUEST:
+      return {
+        ...state,
+        loading : true 
+  
+      };
+
+    case GET_USER_PROFILE_SUCCESS:
+      return {
+        ...state,
+        loading : false ,
+        user : action.payload.data,
+        success : true
+      };
+    case GET_USER_PROFILE_FAIL:
+      return {
+        ...state,
+        loading : false ,
+        success : false
+      };
+  
+   
+    default:
+      return state;
+  }
+};
+
+
+
 
 export const verificationReducer = (
   state = { verified: false, isSent: false },
@@ -128,7 +199,6 @@ export const verificationReducer = (
         ...state,
         isSent: false,
       };
-
     case VERIFICATION_REQUEST:
       return {
         ...state,
@@ -140,7 +210,6 @@ export const verificationReducer = (
         verified: true,
         payload: action.payload
       };
-
     case VERIFICATION_FAIL:
       return {
         ...state,

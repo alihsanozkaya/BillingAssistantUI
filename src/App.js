@@ -17,6 +17,8 @@ import PricingPage from "./pages/PricingPage";
 import UploadPhoto from "./pages/UploadInvoicePage";
 import ConditionsPage from "./pages/ConditionsPage";
 import PrivacyPage from "./pages/PrivacyPage";
+import PaymentPage from "./pages/PaymentPage";
+import MyInvoiceDetailPage from "./pages/MyInvoiceDetailPage";
 
 function App() {
   const dispatch = useDispatch();
@@ -42,6 +44,8 @@ function App() {
         <Route path="/properties" element={<PropertiesPage />} />
         <Route path="/conditions" element={<ConditionsPage />} />
         <Route path="/privacy" element={<PrivacyPage />} />
+        <Route path="/payment" element={<PaymentPage />} />
+        <Route path="/my-invoices/:invoiceId/details" element={<MyInvoiceDetailPage />} />
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
     </Router>
