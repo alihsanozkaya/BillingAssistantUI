@@ -3,15 +3,17 @@ import MainLayout from '../layouts/MainLayout'
 import PaymentResult from '../components/Results/PaymentResult'
 import { useSelector , useDispatch } from 'react-redux'
 import { PaySubscription } from '../redux/actions/PaymentActions'
+import { useTranslation } from "react-i18next";
+
 const PaymentPage = () => {
     const paySubscription = useSelector((state) => state.paySubscription)
     const dispatch = useDispatch()
     const [amount, setAmount] = useState(250)
     const handlePaySubscription = () => {
-       // bura redux ile doldurulacak
        dispatch(PaySubscription(amount))
-    
       }
+  const { t } = useTranslation();
+
   return (
    <MainLayout>
      <div className="container mx-auto">
@@ -19,16 +21,16 @@ const PaymentPage = () => {
         {paySubscription.isPayed ? <PaymentResult /> : (
           <>
 <div class="mt-10 bg-gray-50 px-4 pt-8 lg:mt-5">
-            <p class="text-xl font-medium">Aidat Ödemesi</p>
+            <p class="text-xl font-medium">{t("paymentPage.header")}</p>
             <p class="text-gray-400">
-            Aidat kısmında ki ödemeyi bu sayfadan yapabilirsiniz
+            {t("paymentPage.description")}
             </p>
             <div class="">
               <label
                 for="card-holder"
                 class="mt-4 mb-2 block text-sm font-medium"
               >
-                Card Holder
+              {t("paymentPage.cardName")}
               </label>
               <div class="relative">
                 <input
@@ -36,7 +38,7 @@ const PaymentPage = () => {
                   id="card-holder"
                   name="card-holder"
                   class="w-full rounded-md border border-gray-200 px-4 py-3 pl-11 text-sm uppercase shadow-sm outline-none focus:z-10 focus:border-blue-500 focus:ring-blue-500"
-                  placeholder="Your full name here"
+                  placeholder={t("paymentPage.placeholder")}
                 />
                 <div class="pointer-events-none absolute inset-y-0 left-0 inline-flex items-center px-3">
                   <svg
@@ -50,7 +52,7 @@ const PaymentPage = () => {
                 </div>
               </div>
               <label for="card-no" class="mt-4 mb-2 block text-sm font-medium">
-                Card Details
+              {t("paymentPage.cardDetails")}
               </label>
               <div class="flex">
                 <div class="relative w-7/12 flex-shrink-0">
@@ -85,19 +87,14 @@ const PaymentPage = () => {
                   placeholder="CVC"
                 />
               </div>
-              
-
-
-           
-      
               </div>
             <button class="mt-4 mb-8 w-full rounded-md bg-gray-900 px-6 py-3 font-medium text-white" onClick={handlePaySubscription}>
-            Ödeme yap
+            {t("paymentPage.btn")}
             </button>
           </div>
           
           <div class="px-4 pt-8">
-            <p class="mt-8 text-lg font-medium">Shipping Methods</p>
+            <p class="mt-8 text-lg font-medium">{t("paymentPage.selection")}</p>
             <form class="mt-5 grid gap-6">
               <div class="relative">
                 <input
@@ -114,14 +111,11 @@ const PaymentPage = () => {
                 >
                   <img
                     class="w-14 object-contain"
-                    src="https://play-lh.googleusercontent.com/jMECkIn97zzMi1IoWlb9SYjtbYolSPmgdLmylwIwo3pbhQ_omkRMzM0bS-PnN461hg"
+                    src="https://www.ayicgiyim.com/image/catalog/demo/blog/mastercard-nedir-nerde-kullan%C4%B1l%C4%B1r-master-card.png"
                     alt=""
                   />
                   <div class="ml-5">
-                    <span class="mt-2 font-semibold">Fedex Delivery</span>
-                    <p class="text-slate-500 text-sm leading-6">
-                      Delivery: 2-4 Days
-                    </p>
+                    <span class="mt-2 font-semibold">Mastercard</span>
                   </div>
                 </label>
               </div>
@@ -144,10 +138,7 @@ const PaymentPage = () => {
                     alt=""
                   />
                   <div class="ml-5">
-                    <span class="mt-2 font-semibold">Fedex Delivery</span>
-                    <p class="text-slate-500 text-sm leading-6">
-                      Delivery: 2-4 Days
-                    </p>
+                    <span class="mt-2 font-semibold">Visa</span>
                   </div>
                 </label>
               </div>

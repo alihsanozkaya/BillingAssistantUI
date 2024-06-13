@@ -82,9 +82,15 @@
             "link" : "To return to the homepage"
         }
     },
+    "uploadInvoiceModal" : {
+        "modalTitle" : "Edit image",
+        "modalCancel" : "Cancel",
+        "modalOk" : "Ok"
+    },
     "myInvoicesPage" : {
         "header" : "My Invoices",
-        "upload" : "Upload invoice"
+        "upload" : "Upload invoice",
+        "total" : "Total Paid Amount"
     },
     "notFoundPage" : {
         "header" : "Not found page",
@@ -99,7 +105,20 @@
         "btn" : "Verify Email"
     },
     "uploadInvoicePage" : {
-        "btn" : "Add invoice"
+        "btn" : "Add invoice",
+        "uploadSuccess" : "successfully uploaded.",
+        "uploadError": "could not load due to error.",
+        "upload" : "Click to upload",
+        "format" : "JPG and JPEG",
+        "uploaded" : "Uploaded"
+    },
+    "MyInvoiceDetailPage" : {
+        "piece" : "piece",
+        "turnBack" : "Back to my invoices",
+        "productName" : "Product Name",
+        "productUnit" : "Product Unit",
+        "productPrice" : "Product Price",
+        "totalAmount" : "Total amount"
     },
     "conditionsPage" : {
         "header" : "Conditions",
@@ -150,5 +169,14 @@
         "feature3": "Advanced invoice tracking",
         "feature4": "Unlimited invoice upload",
         "description" : "Users can make detailed analysis of the money they spend according to categories."
+    },
+    "paymentPage" : {
+        "header" : "Membership Payment",
+        "description" : "You can make membership payment from this page.",
+        "placeholder" : "Enter your full name",
+        "cardName" : "Name On The Card",
+        "cardDetails": "Card Details",
+        "btn" : "Pay",
+        "selection": "Card Selection"
     }
 }

@@ -84,7 +84,8 @@
     },
     "myInvoicesPage" : {
         "header" : "Meine Rechnungen",
-        "upload" : "Rechnung hochladen"
+        "upload" : "Rechnung hochladen",
+        "total" : "Gezahlter Gesamtbetrag"
     },
     "notFoundPage" : {
         "header" : "Seite nicht gefunden",
@@ -99,7 +100,20 @@
         "btn" : "E-Mail bestätigen"
     },
     "uploadInvoicePage" : {
-        "btn" : "Rechnung hinzufügen"
+        "btn" : "Rechnung hinzufügen",
+        "uploadSuccess" : "erfolgreich hochgeladen.",
+        "uploadError": "konnte aufgrund eines Fehlers nicht geladen werden.",
+        "upload" : "Klicken Sie zum Hochladen",
+        "format" : "JPG und JPEG",
+        "uploaded" : "Hochgeladen"
+    },
+    "MyInvoiceDetailPage" : {
+        "piece" : "Stück",
+        "turnBack" : "Zurück zu meinen Rechnungen",
+        "productName" : "Produktname",
+        "productUnit" : "Produkteinheit",
+        "productPrice" : "Produktpreis",
+        "totalAmount" : "Gesamtmenge"
     },
     "conditionsPage" : {
         "header" : "Bedingungen",
@@ -150,5 +164,14 @@
         "feature3": "Erweiterte Rechnungsverfolgung",
         "feature4": "Unbegrenzter Rechnungs-Upload",
         "description" : "Benutzer können ihre Ausgaben nach Kategorien detailliert analysieren."
+    },
+    "paymentPage" : {
+        "header" : "Mitgliedszahlung",
+        "description" : "Auf dieser Seite können Sie die Zahlung für die Mitgliedschaft vornehmen.",
+        "placeholder" : "Geben Sie Ihren vollständigen Namen ein",
+        "cardName" : "Name auf der Karte",
+        "cardDetails": "Kartendetails",
+        "btn" : "Zahlen",
+        "selection": "Kartenauswahl"
     }
 }

@@ -5,3 +5,31 @@
 .is-dragging a {
     pointer-events: none;
 } */
+.ant-table-filter-dropdown-btns > .ant-btn.ant-btn-link {
+    background-color: #C0C0C0;
+    color: black;
+}
+.ant-table-filter-dropdown-btns > .ant-btn.ant-btn-link:hover {
+    background-color: #DDDDDD;
+    color: black;
+}
+  .ant-table-filter-dropdown-btns > .ant-btn.ant-btn-link:disabled {
+    background-color: white;
+}
+  
+.ant-table-filter-dropdown-btns > .ant-btn.ant-btn-primary {
+    background-color: #C0C0C0;
+    color: black;
+}
+.ant-table-filter-dropdown-btns > .ant-btn.ant-btn-primary:hover {
+    background-color: #DDDDDD;
+    color: black;
+}
+
+.ant-table-row-even {
+  background-color: #CCCCCC; /* Light gray for even rows */
+}
+
+.ant-table-row-odd {
+  background-color: #fff; /* White for odd rows */
+}

@@ -1,6 +1,6 @@
 import React, { Fragment } from "react";
 import { Popover, Transition } from "@headlessui/react";
-import {  ChevronDownIcon } from "@heroicons/react/20/solid";
+import { ChevronDownIcon } from "@heroicons/react/20/solid";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
 import { logout } from "../../redux/actions/AuthActions";
@@ -23,7 +23,7 @@ export const LoggedInHeader = () => {
     <Popover.Group className="hidden lg:flex lg:gap-x-12">
       <Popover className="relative">
         <Popover.Button className="flex items-center gap-x-1 text-sm font-semibold leading-6 p-2 rounded-lg hover:no-underline hover:bg-white">
-        {t("header.myAccount")}
+          {t("header.myAccount")}
           <ChevronDownIcon
             className="h-5 w-5 flex-none text-gray-400"
             aria-hidden="true"
@@ -39,7 +39,7 @@ export const LoggedInHeader = () => {
           leaveFrom="opacity-100 translate-y-0"
           leaveTo="opacity-0 translate-y-1"
         >
-          <Popover.Panel className="absolute -left-2 mt-2 w-auto overflow-hidden rounded-lg bg-white shadow-lg ring-1 ring-gray-900/5">
+          <Popover.Panel className="absolute -left-2 mt-2 w-auto overflow-hidden rounded-lg bg-white shadow-lg ring-1 ring-gray-900/5 z-10">
             <div
               className="p-4"
               style={{
@@ -52,7 +52,7 @@ export const LoggedInHeader = () => {
                   to="/my-profile"
                   className="text-sm font-semibold leading-7 p-2 mt-2 rounded-lg hover:no-underline hover:bg-white"
                 >
-                {t("header.myProfile")}
+                  {t("header.myProfile")}
                 </Link>
               </div>
               <div className="flex flex-1 justify-between items-center">
@@ -60,7 +60,7 @@ export const LoggedInHeader = () => {
                   to="/my-invoices"
                   className="text-sm font-semibold leading-7 p-2 mt-2 rounded-lg hover:no-underline hover:bg-white"
                 >
-                {t("header.myInvoices")}
+                  {t("header.myInvoices")}
                 </Link>
               </div>
               <div className="flex flex-1 justify-between items-center">
@@ -68,7 +68,7 @@ export const LoggedInHeader = () => {
                   onClick={LogoutHandler}
                   className="text-sm font-semibold leading-7 p-2 mt-2 rounded-lg hover:no-underline hover:bg-white"
                 >
-                {t("header.logout")}
+                  {t("header.logout")}
                 </button>
               </div>
             </div>

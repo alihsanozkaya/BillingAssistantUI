@@ -4,9 +4,10 @@ import thunk from "redux-thunk";
 import { authReducer, getUserProfileReducer, verificationReducer } from "./reducers/AuthReducer";
 import {categoryReducer} from "./reducers/CategoryReducer"
 import {storeReducer} from "./reducers/StoreReducer"
-import { productReducer } from "./reducers/ProductReducer";
+import { productOcrReducer, productReducer } from "./reducers/ProductReducer";
 import { orderReducer } from "./reducers/OrderReducer";
 import { paySubscriptionReducer } from "./reducers/PaymentReducer";
+import { invoiceReducer } from "./reducers/InvoiceReducer";
 
 const rootReducer = combineReducers({
   auth: authReducer,
@@ -15,8 +16,10 @@ const rootReducer = combineReducers({
   store: storeReducer,
   product: productReducer,
   order: orderReducer,
+  invoice: invoiceReducer,
   getUserProfile : getUserProfileReducer,
-  paySubscription : paySubscriptionReducer
+  paySubscription : paySubscriptionReducer,
+  productOcr : productOcrReducer
 });
 const initialState = {};
 

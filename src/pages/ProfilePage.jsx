@@ -20,8 +20,6 @@ const ProfilePage = () => {
   const dispatch = useDispatch();
   const auth = useSelector((state) => state.auth);
 
-   
-    
      useEffect(() => {
      
       if (id != 0 ) {
@@ -30,7 +28,6 @@ const ProfilePage = () => {
    
      }, [id,auth.update])
   
-  
   useEffect(() => {
     setId(auth.user.id);
   }, [auth.user.id]);
@@ -38,8 +35,6 @@ const ProfilePage = () => {
   const toggleDisabled = () => {
     setDisabled(!disabled);
   };
-  console.log("userId: " +id);
-
   useEffect(() => {
     if (auth.update) {
       setDisabled(true)

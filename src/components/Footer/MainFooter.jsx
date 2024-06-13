@@ -22,9 +22,9 @@ const MainFooter = () => {
         <div className="justify-between sm:flex">
           <div className="space-y-6">
             <ul className="flex flex-wrap items-center gap-4 text-sm sm:text-base">
-              {footerNavs.map((item, idx) => (
-                <li className="text-gray-800 hover:text-gray-500 duration-150 ">
-                  <Link key={idx} to={item.href} className="hover:no-underline">
+              {footerNavs.map((item, id) => (
+                <li key={id} className="text-gray-800 hover:text-gray-500 duration-150 ">
+                  <Link to={item.href} className="hover:no-underline">
                     {item.name}
                   </Link>
                 </li>

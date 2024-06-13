@@ -84,7 +84,8 @@
     },
     "myInvoicesPage" : {
         "header" : "فواتيرى",
-        "upload" : "تحميل الفاتورة"
+        "upload" : "تحميل الفاتورة",
+        "total" : "إجمالي المبلغ المدفوع"
     },
     "notFoundPage" : {
         "header" : "لم يتم العثور على الصفحة",
@@ -99,7 +100,20 @@
         "btn" : "التحقق من البريد الإلكتروني"
     },
     "uploadInvoicePage" : {
-        "btn" : "أضف فاتورة"
+        "btn" : "أضف فاتورة",
+        "uploadSuccess" : "تم الرفع بنجاح.",
+        "uploadError": "لا يمكن التحميل بسبب خطأ.",
+        "upload" : "انقر للتحميل",
+        "format" : "JPG و JPEG",
+        "uploaded" : "تم الرفع"
+    },
+    "MyInvoiceDetailPage" : {
+        "piece" : "قطعة",
+        "turnBack" : "العودة إلى فواتيري",
+        "productName" : "اسم المنتج",
+        "productUnit" : "وحدة المنتج",
+        "productPrice" : "سعر المنتج",
+        "totalAmount" : "المبلغ الإجمالي"
     },
     "conditionsPage" : {
         "header" : "شروط",
@@ -150,5 +164,14 @@
         "feature3": "تتبع الفاتورة المتقدمة",
         "feature4": "تحميل فاتورة غير محدود",
         "description" : "يمكن للمستخدمين إجراء تحليل تفصيلي للأموال التي ينفقونها وفقًا للفئات."
+    },
+    "paymentPage" : {
+        "header" : "دفع العضوية",
+        "description" : "يمكنك تسديد رسوم العضوية من هذه الصفحة.",
+        "placeholder" : "أدخل اسمك الكامل",
+        "cardName" : "الاسم على البطاقة",
+        "cardDetails": "معلومات البطاقة",
+        "btn" : "يدفع",
+        "selection": "اختيار البطاقة"
     }
 }

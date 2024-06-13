@@ -3,17 +3,9 @@ import MainLayout from "../layouts/MainLayout";
 import Fatura from "../images/askida-fatura.jpg";
 import { useTranslation } from "react-i18next";
 import { useDispatch, useSelector } from "react-redux";
-import { GetProducts } from "../redux/actions/ProductActions";
+import { GetByInvoiceId } from "../redux/actions/ProductActions";
 
 const HomePage = () => {
-  const dispatch = useDispatch();
-  const { loading ,products } = useSelector((state) => state.product);
-  if(loading === false) {
-    console.log(products)
-  }
-  useEffect(() => {
-    dispatch(GetProducts());
-  }, [dispatch]);
   const { t } = useTranslation();
   return (
     <MainLayout>

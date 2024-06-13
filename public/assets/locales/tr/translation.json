@@ -84,7 +84,8 @@
     },
     "myInvoicesPage" : {
         "header" : "Faturalarım",
-        "upload" : "Fatura yükle"
+        "upload" : "Fatura yükle",
+        "total" : "Ödenen Toplam Tutar"
     },
     "notFoundPage" : {
         "header" : "Sayfa bulunamadı",
@@ -99,7 +100,20 @@
         "btn" : "Email Doğrula"
     },
     "uploadInvoicePage" : {
-        "btn" : "Fatura ekle"
+        "btn" : "Fatura ekle",
+        "uploadSuccess" : "başarıyla yüklendi.",
+        "uploadError": "hata nedeniyle yüklenemedi.",
+        "upload" : "Yüklemek için tıklayınız",
+        "format" : "JPG ve JPEG",
+        "uploaded" : "Yüklendi"
+    },
+    "MyInvoiceDetailPage" : {
+        "piece" : "parça",
+        "turnBack" : "Faturalarıma geri dön",
+        "productName" : "Ürün Adı",
+        "productUnit" : "Ürün Adeti",
+        "productPrice" : "Ürün Fiyatı",
+        "totalAmount" : "Toplam Tutar"
     },
     "conditionsPage" : {
         "header" : "Şartlar",
@@ -150,5 +164,14 @@
         "feature3": "Gelişmiş fatura takibi",
         "feature4": "Sınırsız fatura yükleme",
         "description" : "Kullanıcılar, harcadıkları paranın kategorilere göre detaylı analizlerini yapabilirler.        "
+    },
+    "paymentPage" : {
+        "header" : "Üyelik Ödemesi",
+        "description" : "Üyelik ödemesini bu sayfadan yapabilirsiniz.",
+        "placeholder" : "Tam adınızı giriniz",
+        "cardName" : "Kart Üzerindeki İsim",
+        "cardDetails": "Kart Detayları",
+        "btn" : "Ödeme yap",
+        "selection": "Kart Seçimi" 
     }
 }
